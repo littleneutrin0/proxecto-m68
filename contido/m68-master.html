@@ -171,13 +171,29 @@ img {
     </div>
 <</widget>></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="1. INT. AULA. FACULTADE DE CIENCIAS - DÍA" tags="" position="925,50" size="100,100">{{IMG: int_aula_ciencias_dia}}
 {{AUDIO: ambiente_clase}}
-{{CHARS: maria}}
-Primeiro día de aulas. MARÍA, estudante de primeiro, é das poucas mulleres. Visítaos un rapaz facendo campaña, JUAN, teñen que votar nas eleccións a delegado e escoller 10 representantes da aula. Alguén comenta que iso non é legal. Juan discúteo, foi aprobado no curso anterior democraticamente. 
+{{SCENE_START: maria@left}}
+Primeiro día de aulas. MARÍA, estudante de primeiro, é das poucas mulleres.
 
-María fala coa compañeira que ten ao seu carón, MERCEDES, que está algo máis ao día da situación. Ela é de Santiago. Queren máis democracia, alguén fala, timidamente, de que España é unha dictadura. María asegura que é unha democracia orgánica. Varios compañeiros que está preto víranse e mírana mal. Mercedes sacode a cabeza, ten moito que aprender. A xente do curso acorda reunirse despois de comer na Mezquita, unha cafetería, para facer a votación. 
+{{SHOW: juan@right}} 
+JUAN: Boas, compañeiros. Temos que votar delegados.
 
-[[OPCION_A: Aceptar con entusiasmo (&quot;Si, claro! Vémonos alí&quot;) -&gt;2. INT. COMEDOR. PENSIÓN - DÍA][$estado.trama.invitacionMezquita = &quot;aceptada&quot;]]
-[[OPCION_B: Dudar por miedo (&quot;Non sei… A Rosario quere que me recolla cedo&quot;) -&gt;2. INT. COMEDOR. PENSIÓN - DÍA][$estado.trama.invitacionMezquita = &quot;dudosa&quot;]]</tw-passagedata><tw-passagedata pid="2" name="2. INT. COMEDOR. PENSIÓN - DÍA" tags="" position="925,200" size="100,100">{{IMG: int_comedor_pension_dia}}
+Alguén comenta que iso non é legal. Juan discúteo, foi aprobado o curso anterior democraticamente.
+
+{{HIDE: juan}}
+MARÍA: (Susurra) Non entendo por que tanta lea.
+
+{{SHOW: mercedes@right}}
+MERCEDES: (Susurra) Queren máis democracia. Eles din que España é unha ditadura.
+
+MARÍA: Pero se isto é unha democracia orgánica, non?
+
+Varios compañeiros que está preto víranse e mírana mal. Mercedes move a cabeza, ten moito que aprender.
+
+{{HIDE: mercedes}}
+A xente do curso acorda reunirse despois de comer na Mezquita, unha cafetería, para facer a votación.
+
+[[&quot;Si, claro! Vémonos alí&quot;-&gt;2. INT. COMEDOR. PENSIÓN - DÍA][$estado.trama.invitacionMezquita = &quot;aceptada&quot;]]
+[[&quot;Non sei… A Rosario quere que me recolla cedo&quot;-&gt;2. INT. COMEDOR. PENSIÓN - DÍA][$estado.trama.invitacionMezquita = &quot;dudosa&quot;]]</tw-passagedata><tw-passagedata pid="2" name="2. INT. COMEDOR. PENSIÓN - DÍA" tags="" position="925,200" size="100,100">{{IMG: int_comedor_pension_dia}}
 {{AUDIO: ambiente_pension}}
 A pensión non ten nome, é un piso grande de dúas plantas, situada na Praza Galicia. Chámanlle como á señora, Rosario. María comenta o día coa súa compañeira, CONCHA, de terceiro de Letras, que fala en castelán.
 &lt;&lt;if $estado.trama.invitacionMezquita is &quot;aceptada&quot;&gt;&gt;
