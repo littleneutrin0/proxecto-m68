@@ -3,8 +3,10 @@ import re
 import os
 from bs4 import BeautifulSoup
 
+# RUTAS RELATIVAS (Asegúrate de que coinciden con tu estructura)
 INPUT_FILE = os.path.join(os.path.dirname(__file__), '../contido/m68-master.html')
 OUTPUT_FILE = os.path.join(os.path.dirname(__file__), '../web-app/src/data/historia.json')
+
 os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
 
 def parse_twine_html(file_path):
@@ -26,92 +28,128 @@ def parse_twine_html(file_path):
             continue
 
         raw_text = p.get_text()
-
-        # 1. Extraer Multimedia y Tags
+        
+        # -------------------------------------------------------------
+        # 1. EXTRAER TAGS (AQUÍ ES DONDE RECUPERAMOS EL ROUTER)
+        # -------------------------------------------------------------
         media = {}
         ai_config = {}
-        tags_a_eliminar = r"\{\{(IMG|AUDIO|VIDEO|VIDEO_BG|IA_CONTEXT|IA_PROMPT|IA_REACTION|CHARS):\s*(.*?)\}\}"
         
-        found_tags = re.findall(tags_a_eliminar, raw_text, re.DOTALL)
+        # Buscamos tags como {{ROUTER: ...}} o {{IMG: ...}}
+        # Nota: NO borramos todavía del texto los comandos SHOW/HIDE/SCENE_START porque esos van incrustados.
+        # Pero SÍ borramos IMG, AUDIO, ROUTER, AI...
+        
+        # Patrón para todos los tags conocidos
+        tag_pattern = r"\{\{(IMG|AUDIO|VIDEO|VIDEO_BG|IA_CONTEXT|IA_PROMPT|IA_REACTION|SCENE_START|SHOW|HIDE|ROUTER):\s*(.*?)\}\}"
+        found_tags = re.findall(tag_pattern, raw_text, re.DOTALL)
+        
         for tag_type, content in found_tags:
-            if "IA" in tag_type:
+            # A. Comandos de personaje -> Se quedan en el texto, no van a 'media'
+            if tag_type in ["SCENE_START", "SHOW", "HIDE"]:
+                pass 
+            
+            # B. Router -> Va a la configuración de IA/Lógica
+            elif tag_type == "ROUTER":
+                parts = [x.strip() for x in content.split(",")]
+                if len(parts) >= 4:
+                    ai_config["ROUTER"] = {
+                        "variable": parts[0],
+                        "value": parts[1],
+                        "targetTrue": parts[2],
+                        "targetFalse": parts[3]
+                    }
+            
+            # C. IA -> Configuración de IA
+            elif "IA" in tag_type:
                 ai_config[tag_type] = content.strip()
-            elif tag_type == "CHARS":
-                media["CHARS"] = [x.strip() for x in content.split(",")]
+            
+            # D. Media normal (IMG, AUDIO) -> Objeto media
             else:
                 media[tag_type] = content.strip()
+        
+        # BORRAMOS del texto visible SOLO los tags que ya hemos procesado y que no deben salir en pantalla
+        # (Es decir, borramos IMG, AUDIO, ROUTER, AI... pero dejamos SHOW/HIDE/SCENE_START)
+        tags_to_delete = r"\{\{(IMG|AUDIO|VIDEO|VIDEO_BG|IA_CONTEXT|IA_PROMPT|IA_REACTION|ROUTER):\s*(.*?)\}\}"
+        clean_text = re.sub(tags_to_delete, "", raw_text, flags=re.DOTALL)
 
-        clean_text = re.sub(tags_a_eliminar, "", raw_text, flags=re.DOTALL)
 
-        # 2. NUEVO: Convertir condicionales <<if>>/<<else>> en comandos especiales
-        # Patrón para detectar bloques if/else/endif
+        # -------------------------------------------------------------
+        # 2. CONVERTIR CONDICIONALES <<if>> EN COMANDOS (OPCIONAL)
+        # -------------------------------------------------------------
+        # Si decides usar la estrategia del ROUTER, este bloque es menos crítico, 
+        # pero lo dejamos por si tienes algún if simple en medio de un diálogo.
+        
         conditional_pattern = r'<<if\s+\$estado\.trama\.(\w+)\s+is\s+"([^"]+)"\s*>>(.*?)(?:<<else>>(.*?))?<</if>>'
         
         def replace_conditional(match):
-            variable = match.group(1).strip()  # ej: "invitacionMezquita"
-            expected_value = match.group(2).strip()  # ej: "aceptada"
-            if_content = match.group(3).strip()  # Contenido del if
-            else_content = match.group(4).strip() if match.group(4) else ""  # Contenido del else
+            variable = match.group(1).strip()
+            expected_value = match.group(2).strip()
+            if_content = match.group(3).strip()
+            else_content = match.group(4).strip() if match.group(4) else ""
             
-            # DEBUG: Imprimir lo que encontramos
-            print(f"  🔍 Condicional detectada: {variable} == '{expected_value}'")
-            
-            # Convertimos a comandos especiales que React entenderá
             result = f"{{{{IF:{variable}={expected_value}}}}}[DIALOGUE_BREAK]{if_content}"
             if else_content:
                 result += f"[DIALOGUE_BREAK]{{{{ELSE}}}}[DIALOGUE_BREAK]{else_content}"
             result += f"[DIALOGUE_BREAK]{{{{ENDIF}}}}"
-            
             return result
 
         clean_text = re.sub(conditional_pattern, replace_conditional, clean_text, flags=re.DOTALL)
 
-        # 3. Extraer Opciones
+
+        # -------------------------------------------------------------
+        # 3. EXTRAER OPCIONES ([[Link]])
+        # -------------------------------------------------------------
         choices = []
+        # Buscamos todos los links
         raw_links_content = re.findall(r"\[\[(.*?)\]\]", clean_text, re.DOTALL)
         
         for link_content in raw_links_content:
-            parts = link_content.split('][', 1)
+            parts = link_content.split('][', 1) 
             link_part = parts[0]
             code = parts[1] if len(parts) > 1 else None
-
+            
+            # Separar Label y Target
             l_parts = re.split(r'->|\|', link_part, 1)
             label = l_parts[0].strip()
             target = l_parts[1].strip() if len(l_parts) > 1 else l_parts[0].strip()
-
-            choice = {
-                "label": label,
-                "target": target,
-                "state_change": None
-            }
-
+            
+            choice = { "label": label, "target": target, "state_change": None }
+            
+            # Procesar el código (Setter)
             if code:
+                # Busca: $estado.trama.variable = "valor"
                 var_match = re.search(r"\$estado\.trama\.(\w+)\s*=\s*[\"']?(.+?)[\"']?$", code.replace('is', '='))
                 if var_match:
                     val = var_match.group(2)
-                    if val.lower() == "true":
-                        val = True
-                    elif val.lower() == "false":
-                        val = False
-                    choice["state_change"] = {
-                        "variable": var_match.group(1),
-                        "value": val
-                    }
-
+                    if val.lower() == "true": val = True
+                    elif val.lower() == "false": val = False
+                    
+                    choice["state_change"] = { "variable": var_match.group(1), "value": val }
+            
             choices.append(choice)
-
-        # 4. Limpieza Final
+        
+        # -------------------------------------------------------------
+        # 4. LIMPIEZA FINAL
+        # -------------------------------------------------------------
+        
+        # a) Borrar los links del texto
         clean_text = re.sub(r"\[\[(.*?)\]\]", "", clean_text, flags=re.DOTALL)
-        clean_text = re.sub(r'<<.*?>>', '', clean_text, flags=re.DOTALL)  # Eliminar <<set>>, <<run>>, etc.
+        
+        # b) Borrar macros residuales de Twine (<<set>>, <<run>>, etc)
+        clean_text = re.sub(r'<<.*?>>', '', clean_text, flags=re.DOTALL)
+        
+        # c) Normalizar saltos de línea para el motor de diálogo
         clean_text = clean_text.replace('\r\n', '\n')
         clean_text = re.sub(r'\n{2,}', '[DIALOGUE_BREAK]', clean_text).strip()
-
-        # 5. Construir JSON
+        
+        # -------------------------------------------------------------
+        # 5. GENERAR JSON
+        # -------------------------------------------------------------
         story_data[pid] = {
             "id": pid,
             "text": clean_text,
             "media": media,
-            "ai": ai_config,
+            "ai": ai_config, # Aquí va el ROUTER
             "choices": choices
         }
 
@@ -125,7 +163,11 @@ try:
             json.dump(data, f, indent=2, ensure_ascii=False)
         print(f"✅ ÉXITO: JSON regenerado en {OUTPUT_FILE}")
         first_scene = list(data.keys())[0] if data else "Ninguna"
-        print(f"👀 Chequeo rápido: La escena '{first_scene}' tiene {len(data[first_scene]['choices'])} opciones detectadas.")
+        # Debug simple para ver si pilla el router en alguna escena
+        for sid, sdata in data.items():
+            if "ROUTER" in sdata.get("ai", {}):
+                print(f"🔀 Router encontrado en: {sid}")
+                break
     else:
         print("⚠️ No se generaron datos.")
 except Exception as e:
