@@ -97,7 +97,8 @@ const GameEngine = () => {
 
 // CUANDO SALEN LAS OPCIONES -> INICIAR VOTACIÓN (SOLO SI HAY MÁS DE UNA)
     useEffect(() => {
-        if (!isLobby && areChoicesVisible && currentScene.choices.length > 0) {
+        // PROTECCIÓN: Engadimos "currentScene &&" para evitar crash se a escena non existe
+        if (!isLobby && areChoicesVisible && currentScene && currentScene.choices.length > 0) {
             
             // SI HAY MÁS DE 1 OPCIÓN -> MODO VOTACIÓN (TEATRO)
             if (currentScene.choices.length > 1) {
@@ -110,7 +111,6 @@ const GameEngine = () => {
             // SI SOLO HAY 1 OPCIÓN -> MODO CONTINUAR (SOLO HOST)
             else {
                 setIsVoting(false);
-                // Avisamos a los móviles que NO hay votación, para que sigan esperando
                 socket.emit('host_end_vote');
             }
 

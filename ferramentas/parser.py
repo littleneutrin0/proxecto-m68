@@ -128,20 +128,34 @@ def parse_twine_html(file_path):
             
             choices.append(choice)
         
-        # -------------------------------------------------------------
-        # 4. LIMPIEZA FINAL
+      # -------------------------------------------------------------
+        # 4. LIMPIEZA FINAL ESTRUCTURAL
         # -------------------------------------------------------------
         
-        # a) Borrar los links del texto
+        # a) Borrar los links del texto visible ([[...]])
         clean_text = re.sub(r"\[\[(.*?)\]\]", "", clean_text, flags=re.DOTALL)
         
-        # b) Borrar macros residuales de Twine (<<set>>, <<run>>, etc)
+        # b) Borrar macros residuales de Twine antiguos
         clean_text = re.sub(r'<<.*?>>', '', clean_text, flags=re.DOTALL)
+
+        # c) CRUCIAL: Separar los comandos lógicos del texto (ANTES Y DESPUÉS)
+        # Esto evita que el texto anterior o posterior sea "comido" por el comando
+        # Añadimos break ANTES y DESPUÉS para aislar totalmente el comando
+        clean_text = re.sub(r'(\{\{(?:IF|ELSE|ENDIF).*?\}\})', r'[DIALOGUE_BREAK]\1[DIALOGUE_BREAK]', clean_text)
         
-        # c) Normalizar saltos de línea para el motor de diálogo
+        # d) Normalizar saltos de línea
         clean_text = clean_text.replace('\r\n', '\n')
-        clean_text = re.sub(r'\n{2,}', '[DIALOGUE_BREAK]', clean_text).strip()
+        # Convertir saltos dobles en breaks
+        clean_text = re.sub(r'\n{2,}', '[DIALOGUE_BREAK]', clean_text)
         
+        # e) Limpieza de breaks redundantes (ej: Break+Break -> Break)
+        # Esto es importante porque al añadir breaks extra podemos haber creado dobles
+        clean_text = re.sub(r'(\[DIALOGUE_BREAK\]\s*)+', '[DIALOGUE_BREAK]', clean_text).strip()
+        
+        # Si el texto empieza por un break (por el aislamiento), lo quitamos
+        if clean_text.startswith('[DIALOGUE_BREAK]'):
+            clean_text = clean_text.replace('[DIALOGUE_BREAK]', '', 1).strip()
+
         # -------------------------------------------------------------
         # 5. GENERAR JSON
         # -------------------------------------------------------------

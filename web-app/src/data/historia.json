@@ -1,7 +1,7 @@
 {
   "1. INT. AULA. FACULTADE DE CIENCIAS - DÍA": {
     "id": "1. INT. AULA. FACULTADE DE CIENCIAS - DÍA",
-    "text": "[DIALOGUE_BREAK]{{SCENE_START: maria@left}}\nPrimeiro día de aulas. MARÍA, estudante de primeiro, é das poucas mulleres.[DIALOGUE_BREAK]{{SHOW: juan@right}} \nJUAN: Boas, compañeiros. Temos que votar delegados.[DIALOGUE_BREAK]Alguén comenta que iso non é legal. Juan discúteo, foi aprobado o curso anterior democraticamente.[DIALOGUE_BREAK]{{HIDE: juan}}\nMARÍA: (Susurra) Non entendo por que tanta lea.[DIALOGUE_BREAK]{{SHOW: mercedes@right}}\nMERCEDES: (Susurra) Queren máis democracia. Eles din que España é unha ditadura.[DIALOGUE_BREAK]MARÍA: Pero se isto é unha democracia orgánica, non?[DIALOGUE_BREAK]Varios compañeiros que está preto víranse e mírana mal. Mercedes move a cabeza, ten moito que aprender.[DIALOGUE_BREAK]{{HIDE: mercedes}}\nA xente do curso acorda reunirse despois de comer na Mezquita, unha cafetería, para facer a votación.[DIALOGUE_BREAK]",
+    "text": "{{SCENE_START: maria@left}}\nPrimeiro día de aulas. MARÍA, estudante de primeiro, é das poucas mulleres.[DIALOGUE_BREAK]{{SHOW: juan@right}} \nJUAN: Boas, compañeiros. Temos que votar delegados.[DIALOGUE_BREAK]Alguén comenta que iso non é legal. Juan discúteo, foi aprobado o curso anterior democraticamente.[DIALOGUE_BREAK]{{HIDE: juan}}\nMARÍA: (Susurra) Non entendo por que tanta lea.[DIALOGUE_BREAK]{{SHOW: mercedes@right}}\nMERCEDES: (Susurra) Queren máis democracia. Eles din que España é unha ditadura.[DIALOGUE_BREAK]MARÍA: Pero se isto é unha democracia orgánica, non?[DIALOGUE_BREAK]Varios compañeiros que está preto víranse e mírana mal. Mercedes move a cabeza, ten moito que aprender.[DIALOGUE_BREAK]{{HIDE: mercedes}}\nA xente do curso acorda reunirse despois de comer na Mezquita, unha cafetería, para facer a votación.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_aula_ciencias_dia",
       "AUDIO": "ambiente_clase"
@@ -28,7 +28,7 @@
   },
   "2. INT. COMEDOR. PENSIÓN - DÍA": {
     "id": "2. INT. COMEDOR. PENSIÓN - DÍA",
-    "text": "[DIALOGUE_BREAK]A pensión non ten nome, é un piso grande de dúas plantas, situada na Praza Galicia. Chámanlle como á señora, Rosario. María comenta o día coa súa compañeira, CONCHA, de terceiro de Letras, que fala en castelán.\n{{IF:invitacionMezquita=aceptada}}[DIALOGUE_BREAK]María cóntalle con entusiasmo que a invitaron á Mezquita. Segue falándolle en galego, animada pola novidade do día.[DIALOGUE_BREAK]{{ELSE}}[DIALOGUE_BREAK]María comenta con dúbidas que a invitaron á Mezquita. Pásase ao castelán inconscientemente, intimidada pola seguridade de Concha.[DIALOGUE_BREAK]{{ENDIF}}\nAparece MANUELA, outra compañeira máis maior, de quinto, que lle recrimina a Concha que lle fale castelán á nova. Arguméntalle que se tanto defende aos asoballados, ben podía rebaixarse a falar na súa lingua. Concha pícase un pouco e segue falando castelán. María fala galego con máis seguridade agora grazas ao apoio de Manuela.\nCóntalles que a convidaron a ir á Mezquita, pregúntalles onde está (non lles di que van facer a votación). Concha pon mala cara, proponlle mellor ir ao Avenida. A Manuela non lle convence. Comezan a discutir sobre bares. Acordan o Miami. María vai con elas?[DIALOGUE_BREAK]",
+    "text": "{{SCENE_START: maria@left}}\nA pensión non ten nome, é un piso grande de dúas plantas, situada na Praza Galicia. Chámanlle como á señora, Rosario.[DIALOGUE_BREAK]María comenta o día coa súa compañeira, CONCHA, de terceiro de Letras, que fala en castelán.[DIALOGUE_BREAK]{{IF:invitacionMezquita=aceptada}}[DIALOGUE_BREAK]María cóntalle con entusiasmo que a invitaron á Mezquita. Segue falándolle en galego, animada pola novidade do día.\n[DIALOGUE_BREAK]{{ELSE}}[DIALOGUE_BREAK]María comenta con dúbidas que a invitaron á Mezquita. Pásase ao castelán inconscientemente, intimidada pola seguridade de Concha.\n[DIALOGUE_BREAK]{{ENDIF}}[DIALOGUE_BREAK]Aparece MANUELA, outra compañeira máis maior, de quinto, que lle recrimina a Concha que lle fale castelán á nova. [DIALOGUE_BREAK]Arguméntalle que se tanto defende aos asoballados, ben podía rebaixarse a falar na súa lingua. Concha pícase un pouco e segue falando castelán. [DIALOGUE_BREAK]María fala galego con máis seguridade agora grazas ao apoio de Manuela.[DIALOGUE_BREAK]Cóntalles que a convidaron a ir á Mezquita, pregúntalles onde está (non lles di que van facer a votación). [DIALOGUE_BREAK]Concha pon mala cara, proponlle mellor ir ao Avenida. A Manuela non lle convence. Comezan a discutir sobre bares. Acordan o Miami. María vai con elas?[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_comedor_pension_dia",
       "AUDIO": "ambiente_pension"
@@ -36,7 +36,7 @@
     "ai": {},
     "choices": [
       {
-        "label": "OPCION_A: Ir con elas (\"Veña!\")",
+        "label": "Ir con elas (\"Veña!\")",
         "target": "2.1 INT. MIAMI - DIA",
         "state_change": {
           "variable": "barNoite",
@@ -44,7 +44,7 @@
         }
       },
       {
-        "label": "OPCION_B: Cumprir coa asemblea (\"Xa lles dixen que ía… Non quero quedar mal\")",
+        "label": "Cumprir coa asemblea (\"Xa lles dixen que ía…\")",
         "target": "2.2 INT. A MEZQUITA - DIA",
         "state_change": {
           "variable": "barNoite",
@@ -55,7 +55,7 @@
   },
   "2.1 INT. MIAMI - DIA": {
     "id": "2.1 INT. MIAMI - DIA",
-    "text": "[DIALOGUE_BREAK]María, Concha e Manuela xogan ao parchís. Miguel, que vén do piso de arriba e coñece a Manuela, achégase a saudar. Dille algunha tontería a María.[DIALOGUE_BREAK]\"Interésache Miguel?\" — pregunta Concha, divertida, mentres move ficha.[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
+    "text": "{{SCENE_START: maria@left, concha@center, manuela@right}}\nMaría, Concha e Manuela xogan ao parchís. [DIALOGUE_BREAK]{{HIDE: manuela}}\n{{SHOW: miguel@right}} \nMiguel, que vén do piso de arriba e coñece a Manuela, achégase a saudar. Dille algunha tontería a María.[DIALOGUE_BREAK]{{HIDE: miguel}}\n\"Interésache Miguel?\" — pregunta Concha, divertida, mentres move ficha.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_miami_dia",
       "AUDIO": "ambiente_bar"
@@ -90,7 +90,7 @@
   },
   "2.2 INT. A MEZQUITA - DIA": {
     "id": "2.2 INT. A MEZQUITA - DIA",
-    "text": "[DIALOGUE_BREAK]María queda cos compañeiros de clase. Coméntanlle os cambios que se produciron na facultade. Hai un debate político que non entende moi ben, líase coas siglas e sobrenomes. Explícanlle que vai haber eleccións a delegado. Van escoller dez representantes por curso, que é unha novidade. Esa Cámara da Facultade é a que escolle ao delegado de facultade. Hai tensión entre a xente de ADE e PCE, aínda que María non o entende ben. María escolle se presentarse a conselleira.[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
+    "text": "{{SCENE_START: maria@left}}\nMaría queda cos compañeiros de clase. Coméntanlle os cambios que se produciron na facultade. Hai un debate político que non entende moi ben, líase coas siglas e sobrenomes. Explícanlle que vai haber eleccións a delegado. [DIALOGUE_BREAK]Van escoller dez representantes por curso, que é unha novidade. Esa Cámara da Facultade é a que escolle ao delegado de facultade. Hai tensión entre a xente de ADE e PCE, aínda que María non o entende ben. María escolle se presentarse a conselleira.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_mezquita_dia",
       "AUDIO": "ambiente_bar"
@@ -117,7 +117,7 @@
   },
   "3. INT. COMEDOR. PENSIÓN - DÍA": {
     "id": "3. INT. COMEDOR. PENSIÓN - DÍA",
-    "text": "[DIALOGUE_BREAK]María, un pouco morriñenta, fala por teléfono coa familia. Cóntanlle cousas da casa. Ela fálalles de Compostela. Hai uns días que empezou a chover e non para. Hai leiteiras e mulleres que traen lamprea de Vilagarcía, que lanzan deseguido o pregón “Compre Lamprea”. A pensión está ben, escóitase a Berenguela. Cando colga, María narra que ao principio lle custou un pouco, pero Compostela acabou por conquistala. [DIALOGUE_BREAK]",
+    "text": "{{SCENE_START: maria@left}}\nMaría, un pouco morriñenta, fala por teléfono coa familia. Cóntanlle cousas da casa. Ela fálalles de Compostela. Hai uns días que empezou a chover e non para. Hai leiteiras e mulleres que traen lamprea de Vilagarcía, que lanzan deseguido o pregón “Compre Lamprea”. A pensión está ben, escóitase a Berenguela. Cando colga, María narra que ao principio lle custou un pouco, pero Compostela acabou por conquistala. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_comedor_pension_dia",
       "AUDIO": "ambiente_pension"
@@ -133,7 +133,7 @@
   },
   "4. EXT. PRAZA GALICIA - DÍA": {
     "id": "4. EXT. PRAZA GALICIA - DÍA",
-    "text": "[DIALOGUE_BREAK]Pola mañá ía á clase. Xoves había feira, non podía ir pola Alameda, chea de galiñas, xente baixando os animais, tiña que ir saltando os cochos. [DIALOGUE_BREAK]",
+    "text": "{{SCENE_START: maria@left}}\nPola mañá ía á clase. Xoves había feira, non podía ir pola Alameda, chea de galiñas, xente baixando os animais, tiña que ir saltando os cochos. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "ext_pgalicia_dia",
       "AUDIO": "ambiente_rua"
@@ -149,7 +149,7 @@
   },
   "5. INT. AULA. FACULTADE DE CIENCIAS - DÍA": {
     "id": "5. INT. AULA. FACULTADE DE CIENCIAS - DÍA",
-    "text": "[DIALOGUE_BREAK]As aulas son exixentes, cústalle un pouco, pero case eran o de menos.[DIALOGUE_BREAK]{{IF:barNoite=miami}}[DIALOGUE_BREAK][DIALOGUE_BREAK]{{ELSE}}[DIALOGUE_BREAK][DIALOGUE_BREAK]{{ENDIF}}[DIALOGUE_BREAK]",
+    "text": "{{SCENE_START: maria@left}}\nAs aulas son exixentes, cústalle un pouco, pero case eran o de menos.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_aula_ciencias_dia",
       "AUDIO": "ambiente_clase"
@@ -158,19 +158,14 @@
     "choices": [
       {
         "label": "Continuar",
-        "target": "6.1. INT. 42 - DÍA",
-        "state_change": null
-      },
-      {
-        "label": "Continuar",
-        "target": "6.2. INT. MEZQUITA - DÍA",
+        "target": "6.LOXICA_BAR",
         "state_change": null
       }
     ]
   },
-  "6.1. INT. 42 - DÍA": {
-    "id": "6.1. INT. 42 - DÍA",
-    "text": "[DIALOGUE_BREAK]Despois atopábase no Franco coa panda, para tomar as cuncas antes de comer. [DIALOGUE_BREAK]",
+  "6_1_INT42DIA": {
+    "id": "6_1_INT42DIA",
+    "text": "{{SCENE_START: maria@left}}\nDespois atopábase no Franco coa panda, para tomar as cuncas antes de comer. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_42_dia",
       "AUDIO": "ambiente_bar"
@@ -184,9 +179,9 @@
       }
     ]
   },
-  "6.2. INT. MEZQUITA - DÍA": {
-    "id": "6.2. INT. MEZQUITA - DÍA",
-    "text": "[DIALOGUE_BREAK]Vou moitas veces cos de clase a tomar café ao Mezquita. Xogan ao mentiroso. [DIALOGUE_BREAK]",
+  "6_2_INTMEZQUITADIA": {
+    "id": "6_2_INTMEZQUITADIA",
+    "text": "{{SCENE_START: maria@left}}\nVou moitas veces cos de clase a tomar café ao Mezquita. Xogan ao mentiroso. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_mezquita_dia",
       "AUDIO": "ambiente_bar"
@@ -202,7 +197,7 @@
   },
   "7. INT. CUARTO. PENSIÓN - DÍA": {
     "id": "7. INT. CUARTO. PENSIÓN - DÍA",
-    "text": "[DIALOGUE_BREAK]Despois, de comer, intenta estudar un pouco, aínda que non sempre o consegue.\nConcha, irrompe no cuarto. Está enfadada porque as autoridades eclesiásticas prohibiron facer unha misa pola morte do Che, unha homenaxe que intentara organizar a JEC, na que ela anda metida. María pregúntalle que é iso da JEC. Manuela explícalle que fan xuntanzas na Casa da Troya, cun consiliario, un cura que dirixe as reunións, fan revisións de vida. E ás veces viaxan, fan xuntanzas en Salamanca, Madrid, Burgos, Toledo… María está impresionada de que a JEC se lamente da morte do Che. Concha fáIalle do Concilio Vaticano II, do compromiso cos asoballados. Intervén Manuela, que non está de acordo con que se lle faga unha misa ao Che. Deixan a discusión, Manuela ensínalle a Concha o que lle deixaron. É un libro. Concha está emocionada. Quere que llo deixe despois. María tamén vai mirar: é O libro vermello dun tal Maosetún. María queda impresionada.[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
+    "text": "{{SCENE_START: maria@left, concha@right, manuela@center}}\nDespois, de comer, intenta estudar un pouco, aínda que non sempre o consegue.\nConcha, irrompe no cuarto. Está enfadada porque as autoridades eclesiásticas prohibiron facer unha misa pola morte do Che, unha homenaxe que intentara organizar a JEC, na que ela anda metida. [DIALOGUE_BREAK]María pregúntalle que é iso da JEC. Manuela explícalle que fan xuntanzas na Casa da Troya, cun consiliario, un cura que dirixe as reunións, fan revisións de vida. E ás veces viaxan, fan xuntanzas en Salamanca, Madrid, Burgos, Toledo… María está impresionada de que a JEC se lamente da morte do Che. Concha fáIalle do Concilio Vaticano II, do compromiso cos asoballados. Intervén Manuela, que non está de acordo con que se lle faga unha misa ao Che. [DIALOGUE_BREAK]Deixan a discusión, Manuela ensínalle a Concha o que lle deixaron. É un libro. Concha está emocionada. Quere que llo deixe despois. María tamén vai mirar: é O libro vermello dun tal Maosetún. María queda impresionada.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_cuarto_pension_dia",
       "AUDIO": "ambiente_pension"
@@ -223,7 +218,7 @@
   },
   "8.2. EXT. PREGUNTOIRO - DÍA": {
     "id": "8.2. EXT. PREGUNTOIRO - DÍA",
-    "text": "[DIALOGUE_BREAK]María e Concha dan un paseo. Achégase Alfredo, o mozo de Manuela. Dilles que quedou despois con ela no 42 para cantar, convídaas a vir.[DIALOGUE_BREAK]",
+    "text": "{{SCENE_START: maria@left, concha@right}}\nMaría e Concha dan un paseo. \n{{HIDE: concha}} \n{{SHOW: alfredo@right}} \nAchégase Alfredo, o mozo de Manuela. Dilles que quedou despois con ela no 42 para cantar, convídaas a vir.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "ext_preguntoiro_dia",
       "AUDIO": "ambiente_rua"
@@ -244,7 +239,7 @@
   },
   "8.2.1. INT. O 42 - TARDE": {
     "id": "8.2.1. INT. O 42 - TARDE",
-    "text": "[DIALOGUE_BREAK]Cantan con xente de Cántigas e Agarimos. María queda impresionada. Manuela únese. Fala coa xente do Galo sobre o galeguismo. [DIALOGUE_BREAK]",
+    "text": "{{SCENE_START: maria@left, manuela@right}}\nCantan con xente de Cántigas e Agarimos. María queda impresionada. Manuela únese. Fala coa xente do Galo sobre o galeguismo. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_42_tarde",
       "AUDIO": "ambiente_bar"
@@ -260,7 +255,7 @@
   },
   "8.2.2. INT. CUARTO. PENSIÓN - NOITE": {
     "id": "8.2.2. INT. CUARTO. PENSIÓN - NOITE",
-    "text": "[DIALOGUE_BREAK]María chama á casa, ten morriña.[DIALOGUE_BREAK]",
+    "text": "{{SCENE_START: maria@left}}\nMaría chama á casa, ten morriña.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_cuarto_pension_noite",
       "AUDIO": "ambiente_pension_noite"
@@ -276,7 +271,7 @@
   },
   "9. INT. AULA. FACULTADE DE CIENCIAS - DÍA": {
     "id": "9. INT. AULA. FACULTADE DE CIENCIAS - DÍA",
-    "text": "[DIALOGUE_BREAK]Juan pasa a informar de que o decano de Ciencias (Ocón) se nega a entregar os cartos que se pagan na matrícula como cota da Asociación de Estudantes. En Medicina si que se liberaron as cotas. María non entende moi ben. Mercedes pona ao día. Ocón non acepta a autoridade de ter tantos representantes do alumnado. María non sabe quen gañou a votación a delegado de facultade, cóntalle que é Francisco Álvarez Fontenla, que se presenta azuzado por ADE para que non saia Vicente Álvarez Areces, comunista. A clase vaise reunir na Mezquita despois de comer para discutilo. María queda de ir. [DIALOGUE_BREAK]{{IF:libro=comprado}}[DIALOGUE_BREAK][DIALOGUE_BREAK]{{ELSE}}[DIALOGUE_BREAK][DIALOGUE_BREAK]{{ENDIF}}",
+    "text": "{{SCENE_START: maria@left, juan@right}}\nJuan pasa a informar de que o decano de Ciencias (Ocón) se nega a entregar os cartos que se pagan na matrícula como cota da Asociación de Estudantes. En Medicina si que se liberaron as cotas. [DIALOGUE_BREAK]{{HIDE: juan}} \n{{SHOW: mercedes@right}} \nMaría non entende moi ben. Mercedes pona ao día. Ocón non acepta a autoridade de ter tantos representantes do alumnado. María non sabe quen gañou a votación a delegado de facultade, cóntalle que é Francisco Álvarez Fontenla, que se presenta azuzado por ADE para que non saia Vicente Álvarez Areces, comunista. A clase vaise reunir na Mezquita despois de comer para discutilo. María queda de ir. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_aula_ciencias_dia",
       "AUDIO": "ambiente_clase"
@@ -285,19 +280,14 @@
     "choices": [
       {
         "label": "Continuar",
-        "target": "10.1. INT. O 42 - DÍA",
-        "state_change": null
-      },
-      {
-        "label": "Continuar",
-        "target": "10.2. INT. MIAMI - DÍA",
+        "target": "10.1_ROUTER",
         "state_change": null
       }
     ]
   },
   "8.1. INT. LIBRARÍA DO XUDEU - DÍA": {
     "id": "8.1. INT. LIBRARÍA DO XUDEU - DÍA",
-    "text": "[DIALOGUE_BREAK]María vai con Manuela á libraría do xudeu. É un portal na rúa do Vilar, con libros colgados. Falan co LIBREIRO, o xudeu. Ve a Miguel saír da parte de atrás, onde están os exemplares prohibidos. Queda impresionado de atopala alí, pero búrlase do libro que está mirando, de Mallarmé.[DIALOGUE_BREAK]Que libro escolle María?[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
+    "text": "María vai con Manuela á libraría do xudeu. É un portal na rúa do Vilar, con libros colgados. Falan co LIBREIRO, o xudeu. Ve a Miguel saír da parte de atrás, onde están os exemplares prohibidos. Queda impresionado de atopala alí, pero búrlase do libro que está mirando, de Mallarmé. Que libro escolle María?[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_libreria_dia",
       "AUDIO": "ambiente_libreria"
@@ -340,7 +330,7 @@
   },
   "8.1.1.a. EXT. PREGUNTOIRO - DÍA": {
     "id": "8.1.1.a. EXT. PREGUNTOIRO - DÍA",
-    "text": "[DIALOGUE_BREAK]Chega correndo á rúa do Preguntoiro e despídese de Miguel. [DIALOGUE_BREAK]",
+    "text": "Chega correndo á rúa do Preguntoiro e despídese de Miguel. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "ext_preguntoiro_dia",
       "AUDIO": "ambiente_rua"
@@ -356,7 +346,7 @@
   },
   "8.1.1.b. INT. CUARTO. PENSIÓN - NOITE": {
     "id": "8.1.1.b. INT. CUARTO. PENSIÓN - NOITE",
-    "text": "[DIALOGUE_BREAK]María le o libro roubado.\n{{IF:libroEscollido=sartre}}[DIALOGUE_BREAK]As frases de Sartre péganlle na cabeza, pero hai parágrafos que non remata de entender.[DIALOGUE_BREAK]\tA atmosfera de Camus déixalle unha sensación rara, case pegañenta.[DIALOGUE_BREAK]\tAs páxinas de Simone de Beauvoir ábrenlle unha nova maneira de pensar.[DIALOGUE_BREAK]\tSente unha mestura de orgullo e morriña ao ler <em>Sempre en Galiza</em>.[DIALOGUE_BREAK]{{ENDIF}}[DIALOGUE_BREAK]Colle tamén o Libro Vermello, pois sabe onde o gardou Manuela. Non o entende.[DIALOGUE_BREAK]",
+    "text": "María le o libro roubado.\n[DIALOGUE_BREAK]{{IF:libroEscollido=sartre}}[DIALOGUE_BREAK]As frases de Sartre péganlle na cabeza, pero hai parágrafos que non remata de entender.[DIALOGUE_BREAK]A atmosfera de Camus déixalle unha sensación rara, case pegañenta.[DIALOGUE_BREAK]As páxinas de Simone de Beauvoir ábrenlle unha nova maneira de pensar.[DIALOGUE_BREAK]Sente unha mestura de orgullo e morriña ao ler <em>Sempre en Galiza</em>.[DIALOGUE_BREAK]{{ENDIF}}[DIALOGUE_BREAK]Colle tamén o Libro Vermello, pois sabe onde o gardou Manuela. Non o entende.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_cuarto_pension_noite",
       "AUDIO": "ambiente_pension_noite"
@@ -372,7 +362,7 @@
   },
   "8.1.2.a. INT. LIBRARÍA DO XUDEU - DÍA": {
     "id": "8.1.2.a. INT. LIBRARÍA DO XUDEU - DÍA",
-    "text": "[DIALOGUE_BREAK]Cando sae Manuela, o libreiro ofrécelle alugar o libro por unha cantidade menor ao prezo de venda. Ela acepta. Manuela marcha, quedou co seu mozo, Alfredo. Vai ao cine. María vai para a casa.[DIALOGUE_BREAK]",
+    "text": "Cando sae Manuela, o libreiro ofrécelle alugar o libro por unha cantidade menor ao prezo de venda. Ela acepta. Manuela marcha, quedou co seu mozo, Alfredo. Vai ao cine. María vai para a casa.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_libreria_dia",
       "AUDIO": "ambiente_libreria"
@@ -388,7 +378,7 @@
   },
   "8.1.2.b. INT. CUARTO. PENSIÓN - NOITE": {
     "id": "8.1.2.b. INT. CUARTO. PENSIÓN - NOITE",
-    "text": "[DIALOGUE_BREAK]María le no seu cuarto.[DIALOGUE_BREAK]{{IF:libroEscollido=sartre}}[DIALOGUE_BREAK]As frases de Sartre péganlle na cabeza, pero hai parágrafos que non remata de entender.[DIALOGUE_BREAK]\tA atmosfera de Camus déixalle unha sensación rara, case pegañenta.[DIALOGUE_BREAK]\tAs páxinas de Simone de Beauvoir ábrenlle unha nova maneira de pensar.[DIALOGUE_BREAK]\tSente unha mestura de orgullo e morriña ao ler <em>Sempre en Galiza</em>.[DIALOGUE_BREAK]{{ENDIF}}[DIALOGUE_BREAK]",
+    "text": "María le no seu cuarto.[DIALOGUE_BREAK]{{IF:libroEscollido=sartre}}[DIALOGUE_BREAK]As frases de Sartre péganlle na cabeza, pero hai parágrafos que non remata de entender.[DIALOGUE_BREAK]A atmosfera de Camus déixalle unha sensación rara, case pegañenta.[DIALOGUE_BREAK]As páxinas de Simone de Beauvoir ábrenlle unha nova maneira de pensar.[DIALOGUE_BREAK]Sente unha mestura de orgullo e morriña ao ler <em>Sempre en Galiza</em>.[DIALOGUE_BREAK]{{ENDIF}}[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_cuarto_pension_noite",
       "AUDIO": "ambiente_pension_noite"
@@ -404,7 +394,7 @@
   },
   "2.1_Res_Restar": {
     "id": "2.1_Res_Restar",
-    "text": "[DIALOGUE_BREAK]Cando marcha, dálles propaganda. A Concha non lle gusta, é dos “chinos”. Pois fala moi ben galego… Concha explícalle que así é como chaman ao comunistas do PCE(m-l). Tiveron lea e separáronse dos outros… Son uns radicais de coidado. María asente, un pouco asustada pola mención ao comunismo. [DIALOGUE_BREAK]((AQUI PODERIA VARIAR O TEXTO LIXEIRAMENTE SEGUNDO A RESPOSTA))[DIALOGUE_BREAK]",
+    "text": "{{SCENE_START: maria@left, concha@center, manuela@right}}\nCando marcha, dálles propaganda. A Concha non lle gusta, é dos “chinos”. Pois fala moi ben galego… Concha explícalle que así é como chaman ao comunistas do PCE(m-l). Tiveron lea e separáronse dos outros… Son uns radicais de coidado. María asente, un pouco asustada pola mención ao comunismo. [DIALOGUE_BREAK]((AQUI PODERIA VARIAR O TEXTO LIXEIRAMENTE SEGUNDO A RESPOSTA))[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_miami_dia",
       "AUDIO": "ambiente_bar"
@@ -420,7 +410,7 @@
   },
   "2.1_Res_Sincera": {
     "id": "2.1_Res_Sincera",
-    "text": "[DIALOGUE_BREAK]Cando marcha, dálles propaganda. A Concha non lle gusta, é dos “chinos”. Pois fala moi ben galego… Concha explícalle que así é como chaman ao comunistas do PCE(m-l). Tiveron lea e separáronse dos outros… Son uns radicais de coidado. María asente, un pouco asustada pola mención ao comunismo. [DIALOGUE_BREAK]((AQUI PODERIA VARIAR O TEXTO LIXEIRAMENTE SEGUNDO A RESPOSTA))[DIALOGUE_BREAK]",
+    "text": "{{SCENE_START: maria@left, concha@center, manuela@right}}\nCando marcha, dálles propaganda. A Concha non lle gusta, é dos “chinos”. Pois fala moi ben galego… Concha explícalle que así é como chaman ao comunistas do PCE(m-l). Tiveron lea e separáronse dos outros… Son uns radicais de coidado. María asente, un pouco asustada pola mención ao comunismo. [DIALOGUE_BREAK]((AQUI PODERIA VARIAR O TEXTO LIXEIRAMENTE SEGUNDO A RESPOSTA))[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_miami_dia",
       "AUDIO": "ambiente_bar"
@@ -436,7 +426,7 @@
   },
   "2.1_Res_Evadir": {
     "id": "2.1_Res_Evadir",
-    "text": "[DIALOGUE_BREAK]Cando marcha, dálles propaganda. A Concha non lle gusta, é dos “chinos”. Pois fala moi ben galego… Concha explícalle que así é como chaman ao comunistas do PCE(m-l). Tiveron lea e separáronse dos outros… Son uns radicais de coidado. María asente, un pouco asustada pola mención ao comunismo. [DIALOGUE_BREAK]((AQUI PODERIA VARIAR O TEXTO LIXEIRAMENTE SEGUNDO A RESPOSTA))[DIALOGUE_BREAK]",
+    "text": "{{SCENE_START: maria@left, concha@center, manuela@right}}\nCando marcha, dálles propaganda. A Concha non lle gusta, é dos “chinos”. Pois fala moi ben galego… Concha explícalle que así é como chaman ao comunistas do PCE(m-l). Tiveron lea e separáronse dos outros… Son uns radicais de coidado. María asente, un pouco asustada pola mención ao comunismo. [DIALOGUE_BREAK]((AQUI PODERIA VARIAR O TEXTO LIXEIRAMENTE SEGUNDO A RESPOSTA))[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_miami_dia",
       "AUDIO": "ambiente_bar"
@@ -452,7 +442,7 @@
   },
   "2.12_Res_NonPresentarse": {
     "id": "2.12_Res_NonPresentarse",
-    "text": "[DIALOGUE_BREAK]Non se presenta por medo[DIALOGUE_BREAK]",
+    "text": "{{SCENE_START: maria@left}}\nNon se presenta por medo[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_mezquita_dia",
       "AUDIO": "ambiente_bar"
@@ -468,7 +458,7 @@
   },
   "2.12_Res_Presentarse": {
     "id": "2.12_Res_Presentarse",
-    "text": "[DIALOGUE_BREAK]Non sae escollida [DIALOGUE_BREAK]",
+    "text": "{{SCENE_START: maria@left}}\nNon sae escollida [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_mezquita_dia",
       "AUDIO": "ambiente_bar"
@@ -484,7 +474,7 @@
   },
   "8.1_Res_Sartre": {
     "id": "8.1_Res_Sartre",
-    "text": "[DIALOGUE_BREAK]Non lle chegan os cartos para pagar. Mentres o Xudeu atende a Manuela na trasteira, Miguel incítaa a roubar o libro, como faría unha revolucionaria. [DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
+    "text": "Non lle chegan os cartos para pagar. Mentres o Xudeu atende a Manuela na trasteira, Miguel incítaa a roubar o libro, como faría unha revolucionaria. [DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_libreria_dia",
       "AUDIO": "ambiente_libreria"
@@ -511,7 +501,7 @@
   },
   "8.1_Res_Simone": {
     "id": "8.1_Res_Simone",
-    "text": "[DIALOGUE_BREAK]Non lle chegan os cartos para pagar. Mentres o Xudeu atende a Manuela na trasteira, Miguel incítaa a roubar o libro, como faría unha revolucionaria. [DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
+    "text": "Non lle chegan os cartos para pagar. Mentres o Xudeu atende a Manuela na trasteira, Miguel incítaa a roubar o libro, como faría unha revolucionaria. [DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_libreria_dia",
       "AUDIO": "ambiente_libreria"
@@ -538,7 +528,7 @@
   },
   "8.1_Res_Camus": {
     "id": "8.1_Res_Camus",
-    "text": "[DIALOGUE_BREAK]Non lle chegan os cartos para pagar. Mentres o Xudeu atende a Manuela na trasteira, Miguel incítaa a roubar o libro, como faría unha revolucionaria. [DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
+    "text": "Non lle chegan os cartos para pagar. Mentres o Xudeu atende a Manuela na trasteira, Miguel incítaa a roubar o libro, como faría unha revolucionaria. [DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_libreria_dia",
       "AUDIO": "ambiente_libreria"
@@ -565,7 +555,7 @@
   },
   "8.1_Res_Castelao": {
     "id": "8.1_Res_Castelao",
-    "text": "[DIALOGUE_BREAK]Non lle chegan os cartos para pagar. Mentres o Xudeu atende a Manuela na trasteira, Miguel incítaa a roubar o libro, como faría unha revolucionaria. [DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
+    "text": "Non lle chegan os cartos para pagar. Mentres o Xudeu atende a Manuela na trasteira, Miguel incítaa a roubar o libro, como faría unha revolucionaria. [DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_libreria_dia",
       "AUDIO": "ambiente_libreria"
@@ -592,7 +582,7 @@
   },
   "10.1. INT. O 42 - DÍA": {
     "id": "10.1. INT. O 42 - DÍA",
-    "text": "[DIALOGUE_BREAK]Vai de cuncas ao 42. Juan tamén anda por alí, con outros compañeiros. María decide se vai saudalo.\n/* OPCIÓNS */[DIALOGUE_BREAK]",
+    "text": "{{SCENE_START: maria@left, juan@right}}[DIALOGUE_BREAK]Vai de cuncas ao 42. Juan tamén anda por alí, con outros compañeiros. María decide se vai saudalo.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_42_dia",
       "AUDIO": "ambiente_bar"
@@ -619,7 +609,7 @@
   },
   "10.2. INT. MIAMI - DÍA": {
     "id": "10.2. INT. MIAMI - DÍA",
-    "text": "[DIALOGUE_BREAK]Queda con Miguel, mocea con ela. Ten unha actitude bastante paternalista. Convídaa a ir despois da asamblea dar un paseo. [DIALOGUE_BREAK]",
+    "text": "Queda con Miguel, mocea con ela. Ten unha actitude bastante paternalista. Convídaa a ir despois da asamblea dar un paseo. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_miami_dia",
       "AUDIO": "ambiente_bar"
@@ -646,7 +636,7 @@
   },
   "10.1.1_Res_Saudar": {
     "id": "10.1.1_Res_Saudar",
-    "text": "[DIALOGUE_BREAK]Fala con el e cóntalle algo máis do que está pasando na facultade e na universidade en xeral. María ten que marchar á asemblea. Juan dille que o seu curso a ten despois. [DIALOGUE_BREAK]",
+    "text": "{{SCENE_START: maria@left, juan@right}}[DIALOGUE_BREAK]Fala con el e cóntalle algo máis do que está pasando na facultade e na universidade en xeral. María ten que marchar á asemblea. Juan dille que o seu curso a ten despois. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_42_dia",
       "AUDIO": "ambiente_bar"
@@ -662,7 +652,7 @@
   },
   "10.1.2_Res_NonSaudar": {
     "id": "10.1.2_Res_NonSaudar",
-    "text": "[DIALOGUE_BREAK]Fala con Manuela e Alfredo dunha conferencia que organiza esa tarde O Galo no Gaiola. María quere unirse?[DIALOGUE_BREAK]",
+    "text": "{{SCENE_START: maria@left, alfredo@center, manuela@right}}[DIALOGUE_BREAK]Fala con Manuela e Alfredo dunha conferencia que organiza esa tarde O Galo no Gaiola. María quere unirse?[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_42_dia",
       "AUDIO": "ambiente_bar"
@@ -689,7 +679,7 @@
   },
   "11. INT MEZQUITA - DIA": {
     "id": "11. INT MEZQUITA - DIA",
-    "text": "[DIALOGUE_BREAK]Explícase a situación, non poden seguir así (ADE e PCE). Unha persoa intervén en galego. Alguén di: “hay gente que no entendemos”. Outro responde: “Que lle poñan un intérprete”. A xente ri. Discuten que facer. Hai algún compañeiro que quere calmar os ánimos. María intervén? [DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
+    "text": "{{SCENE_START: maria@left, alfredo@center, manuela@right}}[DIALOGUE_BREAK]Explícase a situación, non poden seguir así (ADE e PCE). Unha persoa intervén en galego. Alguén di: “hay gente que no entendemos”. Outro responde: “Que lle poñan un intérprete”. A xente ri. Discuten que facer. Hai algún compañeiro que quere calmar os ánimos. María intervén? [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_mezquita_dia",
       "AUDIO": "ambiente_bar"
@@ -716,7 +706,7 @@
   },
   "11.0_Juan": {
     "id": "11.0_Juan",
-    "text": "[DIALOGUE_BREAK]Á saída, atópase con Juan, que vai entrar na reunión.[DIALOGUE_BREAK]   [DIALOGUE_BREAK]",
+    "text": "{{SCENE_START: maria@left, alfredo@center, manuela@right}}[DIALOGUE_BREAK]Á saída, atópase con Juan, que vai entrar na reunión.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_mezquita_dia",
       "AUDIO": "ambiente_bar"
@@ -725,24 +715,14 @@
     "choices": [
       {
         "label": "Continuar",
-        "target": "11.3 - INT. MEZQUITA - DIA",
-        "state_change": null
-      },
-      {
-        "label": "Continuar",
-        "target": "11.1 - INT. MEZQUITA - DIA",
-        "state_change": null
-      },
-      {
-        "label": "Continuar",
-        "target": "11.2 - INT. MEZQUITA - DIA",
+        "target": "11_ROUTER_A",
         "state_change": null
       }
     ]
   },
   "11.1 - INT. MEZQUITA - DIA": {
     "id": "11.1 - INT. MEZQUITA - DIA",
-    "text": "[DIALOGUE_BREAK]Se falou con Juan no 42, convídaa a saír despois.",
+    "text": "Se falou con Juan no 42, convídaa a saír despois.",
     "media": {
       "IMG": "int_mezquita_dia",
       "AUDIO": "ambiente_bar"
@@ -758,7 +738,7 @@
   },
   "11.2 - INT. MEZQUITA - DIA": {
     "id": "11.2 - INT. MEZQUITA - DIA",
-    "text": "[DIALOGUE_BREAK]Se non falou con Juan pero se viron, é el quen lle di algo. Acaba por convidala a saír.",
+    "text": "Se non falou con Juan pero se viron, é el quen lle di algo. Acaba por convidala a saír.",
     "media": {
       "IMG": "int_mezquita_dia",
       "AUDIO": "ambiente_bar"
@@ -774,7 +754,7 @@
   },
   "11.3 - INT. MEZQUITA - DIA": {
     "id": "11.3 - INT. MEZQUITA - DIA",
-    "text": "[DIALOGUE_BREAK]Se foi ao Miami, pasa de longo.\n{{IF:paseoMiguel=aceptar}}[DIALOGUE_BREAK][DIALOGUE_BREAK]{{ELSE}}[DIALOGUE_BREAK][DIALOGUE_BREAK]{{ENDIF}}",
+    "text": "Se foi ao Miami, pasa de longo.\n[DIALOGUE_BREAK]{{IF:paseoMiguel=aceptar}}[DIALOGUE_BREAK]{{ELSE}}[DIALOGUE_BREAK]{{ENDIF}}[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_mezquita_dia",
       "AUDIO": "ambiente_bar"
@@ -795,7 +775,7 @@
   },
   "12.1. EXT. PREGUNTOIRO - NOITE": {
     "id": "12.1. EXT. PREGUNTOIRO - NOITE",
-    "text": "[DIALOGUE_BREAK]Dan un paseo mentres conversan. El non ten interese romántico, quere captala. Convídaa a un piso no que se reunen uns colegas.[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
+    "text": "Dan un paseo mentres conversan. El non ten interese romántico, quere captala. Convídaa a un piso no que se reunen uns colegas.[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
     "media": {
       "IMG": "ext_preguntoiro_noite",
       "AUDIO": "ambiente_rua_noite"
@@ -822,7 +802,7 @@
   },
   "12.1.1. INT. COCIÑA. PISO - NOITE": {
     "id": "12.1.1. INT. COCIÑA. PISO - NOITE",
-    "text": "[DIALOGUE_BREAK]No grupo hai varios simpatizantes do PCE, algunha muller. Discuten de lecturas que non entende moi ben. [DIALOGUE_BREAK]",
+    "text": "No grupo hai varios simpatizantes do PCE, algunha muller. Discuten de lecturas que non entende moi ben. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_cocinha_piso_noite",
       "AUDIO": "ambiente_piso_noite"
@@ -838,7 +818,7 @@
   },
   "12.1-2.2 INT. CUARTO. PENSIÓN - NOITE": {
     "id": "12.1-2.2 INT. CUARTO. PENSIÓN - NOITE",
-    "text": "[DIALOGUE_BREAK]María colle a Concha preparando unha acción das JEC. Están enchendo uns ovos de pintura para tiralos. Quedou con outra compañeira despois.[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
+    "text": "María colle a Concha preparando unha acción das JEC. Están enchendo uns ovos de pintura para tiralos. Quedou con outra compañeira despois.[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_cuarto_pension_noite",
       "AUDIO": "ambiente_pension_noite"
@@ -865,7 +845,7 @@
   },
   "12.2. EXT. PREGUNTOIRO - NOITE": {
     "id": "12.2. EXT. PREGUNTOIRO - NOITE",
-    "text": "[DIALOGUE_BREAK]María e Miguel dan un paseo e conversan. Pídelle que leve propaganda, dela non van sospeitar.[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
+    "text": "María e Miguel dan un paseo e conversan. Pídelle que leve propaganda, dela non van sospeitar.[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
     "media": {
       "IMG": "ext_preguntoiro_noite",
       "AUDIO": "ambiente_rua_noite"
@@ -905,7 +885,7 @@
   },
   "12.1-2.2.1.a CONT": {
     "id": "12.1-2.2.1.a CONT",
-    "text": "[DIALOGUE_BREAK]Lerchean mentres os preparan. [DIALOGUE_BREAK]",
+    "text": "Lerchean mentres os preparan. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_cuarto_pension_noite",
       "AUDIO": "ambiente_pension_noite"
@@ -921,7 +901,7 @@
   },
   "12.1-2.2.1.b CONT": {
     "id": "12.1-2.2.1.b CONT",
-    "text": "[DIALOGUE_BREAK]Abandona o cuarto.[DIALOGUE_BREAK]",
+    "text": "Abandona o cuarto.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_cuarto_pension_noite",
       "AUDIO": "ambiente_pension_noite"
@@ -937,7 +917,7 @@
   },
   "12.1-2.2.1.b. EXT. PREGUNTOIRO - DÍA": {
     "id": "12.1-2.2.1.b. EXT. PREGUNTOIRO - DÍA",
-    "text": "[DIALOGUE_BREAK]Escoitamos fora de plano como os tiran, mentres narran a anécdota (AS ENTREVISTADAS). Pasan correndo.[DIALOGUE_BREAK]",
+    "text": "Escoitamos fora de plano como os tiran, mentres narran a anécdota (AS ENTREVISTADAS). Pasan correndo.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "ext_preguntoiro_dia",
       "AUDIO": "ambiente_rua_dia, tirar_ovos"
@@ -966,7 +946,7 @@
   },
   "12.1-2.2.1.b. INT. COMEDOR. PENSIÓN - NOITE": {
     "id": "12.1-2.2.1.b. INT. COMEDOR. PENSIÓN - NOITE",
-    "text": "[DIALOGUE_BREAK]Vai onde Manuela, que leva por pirmeira vez pantalóns. María queda impresionada. Polo menos non vai ter que collerlle máis puntos ás medias.[DIALOGUE_BREAK]",
+    "text": "Vai onde Manuela, que leva por pirmeira vez pantalóns. María queda impresionada. Polo menos non vai ter que collerlle máis puntos ás medias.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_comedor_pension_noite",
       "AUDIO": "ambiente_pension_noite"
@@ -982,7 +962,7 @@
   },
   "13. INT. AULA. FACULTADE DE CIENCIAS - DÍA": {
     "id": "13. INT. AULA. FACULTADE DE CIENCIAS - DÍA",
-    "text": "[DIALOGUE_BREAK]Hai moito barullo, vaise reunir a Cámara de Cámaras (o Camarón). Hai queixas porque non se entregan os cartos da matrícula. Fálase tamén da situación en Madrid. Decrétase a folga o 15X porque non lles deixan o local para reunirse. [DIALOGUE_BREAK]{{IF:convitePisoJuan=aceptar}}[DIALOGUE_BREAK][DIALOGUE_BREAK]   [DIALOGUE_BREAK]{{ENDIF}}",
+    "text": "Hai moito barullo, vaise reunir a Cámara de Cámaras (o Camarón). Hai queixas porque non se entregan os cartos da matrícula. Fálase tamén da situación en Madrid. Decrétase a folga o 15X porque non lles deixan o local para reunirse. [DIALOGUE_BREAK]{{IF:convitePisoJuan=aceptar}}[DIALOGUE_BREAK]{{ENDIF}}[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_aula_ciencias_dia",
       "AUDIO": "ambiente_clase"
@@ -1003,7 +983,7 @@
   },
   "13.1. INT. AULA. FACULTADE DE CIENCIAS - DIA": {
     "id": "13.1. INT. AULA. FACULTADE DE CIENCIAS - DIA",
-    "text": "[DIALOGUE_BREAK]Juan pídelle que leve unhas octavillas e as lance pola facultade.[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
+    "text": "Juan pídelle que leve unhas octavillas e as lance pola facultade.[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_aula_ciencias_dia",
       "AUDIO": "ambiente_clase"
@@ -1030,7 +1010,7 @@
   },
   "SECUENCIA DE MONTAXE: FOLGA NOS XORNAIS": {
     "id": "SECUENCIA DE MONTAXE: FOLGA NOS XORNAIS",
-    "text": "SECUENCIA DE MONTAXE: FOLGA NOS XORNAIS. El Correo Gallego chámalles aos estudantes “inmunda escoria”.\n{{IF:levarOctavillas=aceptar}}[DIALOGUE_BREAK][DIALOGUE_BREAK]   [DIALOGUE_BREAK]   \n \n   [DIALOGUE_BREAK]{{ENDIF}}",
+    "text": "SECUENCIA DE MONTAXE: FOLGA NOS XORNAIS. El Correo Gallego chámalles aos estudantes “inmunda escoria”.\n[DIALOGUE_BREAK]{{IF:levarOctavillas=aceptar}}[DIALOGUE_BREAK]{{ENDIF}}[DIALOGUE_BREAK]",
     "media": {},
     "ai": {},
     "choices": [
@@ -1058,7 +1038,7 @@
   },
   "13.1_Res_Rexeitar": {
     "id": "13.1_Res_Rexeitar",
-    "text": "[DIALOGUE_BREAK]Juan queda decepcionado.[DIALOGUE_BREAK]",
+    "text": "Juan queda decepcionado.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_aula_ciencias_dia",
       "AUDIO": "ambiente_clase"
@@ -1087,7 +1067,7 @@
   },
   "14.1. INT. COCIÑA. PISO - DÍA": {
     "id": "14.1. INT. COCIÑA. PISO - DÍA",
-    "text": "[DIALOGUE_BREAK]Juan, María e outros colegas comentan o xornal con sorna. Fálase de que se vai facer unha acción de protesta. María vai?[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
+    "text": "Juan, María e outros colegas comentan o xornal con sorna. Fálase de que se vai facer unha acción de protesta. María vai?[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_cocinha_piso_dia",
       "AUDIO": "ambiente_piso_dia"
@@ -1114,7 +1094,7 @@
   },
   "14.2. INT. MIAMI - DÍA": {
     "id": "14.2. INT. MIAMI - DÍA",
-    "text": "[DIALOGUE_BREAK]María está con Mercedes tomando algo, mentres comentan o xornal. Vén avisala Miguel de que hai unha acción preparada. María vai?\nMaría comenta con Concha o titular do xornal. Concha cóntalle que se está preparando unha acción. María vai?[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
+    "text": "María está con Mercedes tomando algo, mentres comentan o xornal. Vén avisala Miguel de que hai unha acción preparada. María vai?\nMaría comenta con Concha o titular do xornal. Concha cóntalle que se está preparando unha acción. María vai?[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_miami_dia",
       "AUDIO": "ambiente_bar"
@@ -1141,7 +1121,7 @@
   },
   "14.3. INT. CUARTO. PENSIÓN - DÍA": {
     "id": "14.3. INT. CUARTO. PENSIÓN - DÍA",
-    "text": "[DIALOGUE_BREAK]María comenta con Concha o titular do xornal. Concha cóntalle que se está preparando unha acción. María vai?[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
+    "text": "María comenta con Concha o titular do xornal. Concha cóntalle que se está preparando unha acción. María vai?[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_cuarto_pension_dia",
       "AUDIO": "ambiente_pension_dia"
@@ -1168,7 +1148,7 @@
   },
   "14.4. INT. COMEDOR. PENSIÓN - DÍA": {
     "id": "14.4. INT. COMEDOR. PENSIÓN - DÍA",
-    "text": "[DIALOGUE_BREAK]María comenta con Manuela o titular do xornal. Concha cóntalle que se está preparando unha acción. María vai?[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
+    "text": "María comenta con Manuela o titular do xornal. Concha cóntalle que se está preparando unha acción. María vai?[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_comedor_pension_dia",
       "AUDIO": "ambiente_pension_dia"
@@ -1195,7 +1175,7 @@
   },
   "15.1. EXT. PREGUNTOIRO - DÍA": {
     "id": "15.1. EXT. PREGUNTOIRO - DÍA",
-    "text": "[DIALOGUE_BREAK]Hai uns 400 estudantes. Quéimanse varios exemplares de El Correo Gallego. Os estudantes son dispersados pola policía. Foxen cantando o himno galego, que xa comezaran a interpretar, pero non todos o saben. María decide para onde escapar: [DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
+    "text": "Hai uns 400 estudantes. Quéimanse varios exemplares de El Correo Gallego. Os estudantes son dispersados pola policía. Foxen cantando o himno galego, que xa comezaran a interpretar, pero non todos o saben. María decide para onde escapar: [DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
     "media": {
       "IMG": "ext_preguntoiro_dia",
       "AUDIO": "ambiente_rua_dia"
@@ -1222,7 +1202,7 @@
   },
   "15.2.a. INT. MIAMI - DÍA": {
     "id": "15.2.a. INT. MIAMI - DÍA",
-    "text": "[DIALOGUE_BREAK]Queda se está ou vai ao Miami a estudar, soa. [DIALOGUE_BREAK]",
+    "text": "Queda se está ou vai ao Miami a estudar, soa. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_miami_dia",
       "AUDIO": "ambiente_rua_dia"
@@ -1251,7 +1231,7 @@
   },
   "SECUENCIA DE MONTAXE: NOTICIAS DAS DETENCIÓNS E DAS PROTESTAS": {
     "id": "SECUENCIA DE MONTAXE: NOTICIAS DAS DETENCIÓNS E DAS PROTESTAS",
-    "text": "SECUENCIA DE MONTAXE: NOTICIAS DAS DETENCIÓNS E DAS PROTESTAS (Areces foi detido, Echeverri libérao). O ambiente vaise caldeando. [DIALOGUE_BREAK]{{IF:escaparProtesta=dereita}}[DIALOGUE_BREAK][DIALOGUE_BREAK]   [DIALOGUE_BREAK]{{ENDIF}}",
+    "text": "SECUENCIA DE MONTAXE: NOTICIAS DAS DETENCIÓNS E DAS PROTESTAS (Areces foi detido, Echeverri libérao). O ambiente vaise caldeando. [DIALOGUE_BREAK]{{IF:escaparProtesta=dereita}}[DIALOGUE_BREAK]{{ENDIF}}[DIALOGUE_BREAK]",
     "media": {},
     "ai": {},
     "choices": [
@@ -1269,7 +1249,7 @@
   },
   "15.1.1 EXT. PREGUNTOIRO - DÍA": {
     "id": "15.1.1 EXT. PREGUNTOIRO - DÍA",
-    "text": "[DIALOGUE_BREAK]Consegue escapar.[DIALOGUE_BREAK]",
+    "text": "Consegue escapar.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "ext_preguntoiro_dia",
       "AUDIO": "ambiente_rua_dia"
@@ -1285,7 +1265,7 @@
   },
   "15.1.2 EXT. PREGUNTOIRO - DÍA": {
     "id": "15.1.2 EXT. PREGUNTOIRO - DÍA",
-    "text": "[DIALOGUE_BREAK]Un policía cóllea e é detida. [DIALOGUE_BREAK]",
+    "text": "Un policía cóllea e é detida. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "ext_preguntoiro_dia",
       "AUDIO": "ambiente_rua_dia"
@@ -1301,7 +1281,7 @@
   },
   "16.1. INT. COMEDOR. PENSIÓN - DÍA": {
     "id": "16.1. INT. COMEDOR. PENSIÓN - DÍA",
-    "text": "[DIALOGUE_BREAK]Fala co pai por teléfono, indignado, quere controlala máis.[DIALOGUE_BREAK]",
+    "text": "Fala co pai por teléfono, indignado, quere controlala máis.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_comedor_pension_dia",
       "AUDIO": "ambiente_pension"
@@ -1317,7 +1297,7 @@
   },
   "16.2. INT. COMEDOR. PENSIÓN - DÍA": {
     "id": "16.2. INT. COMEDOR. PENSIÓN - DÍA",
-    "text": "[DIALOGUE_BREAK]Fala co pai por teléfono co pai, dille que ela non anda metida en nada raro.[DIALOGUE_BREAK]",
+    "text": "Fala co pai por teléfono co pai, dille que ela non anda metida en nada raro.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_comedor_pension_dia",
       "AUDIO": "ambiente_pension"
@@ -1333,7 +1313,7 @@
   },
   "17. INT. CUARTO. PENSIÓN - DÍA": {
     "id": "17. INT. CUARTO. PENSIÓN - DÍA",
-    "text": "[DIALOGUE_BREAK]Escoita música con Concha e Manuela, ás agochadas. Só lles deixan a cassette de cancións revolucionarias unhas horas. Escoitánas na pensión no armario empotrado. Metíanse dentro para aprendelas. Unha copíabaas, despois aprendíanas e cantábanas. Eran cousas moi valiosas, era ilegal. Poñen a canción Los dos gallos[DIALOGUE_BREAK]",
+    "text": "Escoita música con Concha e Manuela, ás agochadas. Só lles deixan a cassette de cancións revolucionarias unhas horas. Escoitánas na pensión no armario empotrado. Metíanse dentro para aprendelas. Unha copíabaas, despois aprendíanas e cantábanas. Eran cousas moi valiosas, era ilegal. Poñen a canción Los dos gallos[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_cuarto_pension_dia",
       "AUDIO": "ambiente_pension"
@@ -1349,7 +1329,7 @@
   },
   "SECUENCIA - Cantando": {
     "id": "SECUENCIA - Cantando",
-    "text": "SECUENCIA DOCUMENTAL: Pasamos a secuecia documental de como a cantan as ENTREVISTADAS.[DIALOGUE_BREAK]{{IF:levarOctavillas=aceptar}}[DIALOGUE_BREAK][DIALOGUE_BREAK]   [DIALOGUE_BREAK]   [DIALOGUE_BREAK]{{ELSE}}[DIALOGUE_BREAK][DIALOGUE_BREAK]{{ENDIF}}[DIALOGUE_BREAK]",
+    "text": "SECUENCIA DOCUMENTAL: Pasamos a secuecia documental de como a cantan as ENTREVISTADAS.[DIALOGUE_BREAK]{{IF:levarOctavillas=aceptar}}[DIALOGUE_BREAK]{{ELSE}}[DIALOGUE_BREAK]{{ENDIF}}[DIALOGUE_BREAK]",
     "media": {},
     "ai": {},
     "choices": [
@@ -1377,7 +1357,7 @@
   },
   "18.1. INT. AULA. FACULTADE DE CIENCIAS - DÍA": {
     "id": "18.1. INT. AULA. FACULTADE DE CIENCIAS - DÍA",
-    "text": "[DIALOGUE_BREAK]Juan cóntalle que a nova asamblea será o mércores 6 de marzo. Dille que se está cocendo algo grande, hai moita tensión.[DIALOGUE_BREAK]",
+    "text": "Juan cóntalle que a nova asamblea será o mércores 6 de marzo. Dille que se está cocendo algo grande, hai moita tensión.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_aula_ciencias_dia",
       "AUDIO": "ambiente_clase"
@@ -1393,7 +1373,7 @@
   },
   "18.2. INT. AULA. FACULTADE DE CIENCIAS - DÍA": {
     "id": "18.2. INT. AULA. FACULTADE DE CIENCIAS - DÍA",
-    "text": "[DIALOGUE_BREAK]Mercedes pásalle info para unha asemblea en Ciencias, o mércores 6 de marzo. O luns houbo outra, convocárase ás autoridades académicas para a seguinte. Vai ou non? [DIALOGUE_BREAK]   [DIALOGUE_BREAK]",
+    "text": "Mercedes pásalle info para unha asemblea en Ciencias, o mércores 6 de marzo. O luns houbo outra, convocárase ás autoridades académicas para a seguinte. Vai ou non? [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_aula_ciencias_dia",
       "AUDIO": "ambiente_clase"
@@ -1425,7 +1405,7 @@
   },
   "19.2. INT. AULA. FACULTADE DE CIENCIAS - DÍA": {
     "id": "19.2. INT. AULA. FACULTADE DE CIENCIAS - DÍA",
-    "text": "[DIALOGUE_BREAK]É unha asemblea multitudinaria. María está con Mercedes. No medio da discusión, irrompe Ocón e pídelle ao delegado de facultade (FONTENLA) que o acompañe á comisaría. Tamén a outros tres delegados, que conducíu fóra da facultade entre asubíos e berros de compañeiros: “Ocón dimisión por fascista y por cabrón”. Ocón enfróntase aos estudantes: “A ver quien es el macho que se enfrenta conmigo… gallinas!”. Sae. A asemblea continúa e decrétase a folga indefinida. Moita presenza policial á saída.[DIALOGUE_BREAK]",
+    "text": "É unha asemblea multitudinaria. María está con Mercedes. No medio da discusión, irrompe Ocón e pídelle ao delegado de facultade (FONTENLA) que o acompañe á comisaría. Tamén a outros tres delegados, que conducíu fóra da facultade entre asubíos e berros de compañeiros: “Ocón dimisión por fascista y por cabrón”. Ocón enfróntase aos estudantes: “A ver quien es el macho que se enfrenta conmigo… gallinas!”. Sae. A asemblea continúa e decrétase a folga indefinida. Moita presenza policial á saída.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_aula_ciencias_dia",
       "AUDIO": "ambiente_clase"
@@ -1441,7 +1421,7 @@
   },
   "18.2.1. INT. MIAMI - DÍA": {
     "id": "18.2.1. INT. MIAMI - DÍA",
-    "text": "[DIALOGUE_BREAK]Queda con Manuela e xogan ao parchís. O seu mozo Alfredo trae a info. Ocón interrompeu a asemblea, quería levar os compañeiros. Decidiuse facer folga indefinida. Manuela recrimínalle a María non ir á asemblea.  [DIALOGUE_BREAK]",
+    "text": "Queda con Manuela e xogan ao parchís. O seu mozo Alfredo trae a info. Ocón interrompeu a asemblea, quería levar os compañeiros. Decidiuse facer folga indefinida. Manuela recrimínalle a María non ir á asemblea.  [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_miami_dia",
       "AUDIO": "ambiente_bar"
@@ -1457,7 +1437,7 @@
   },
   "19.1. INT. AULA. FACULTADE DE CIENCIAS - DÍA": {
     "id": "19.1. INT. AULA. FACULTADE DE CIENCIAS - DÍA",
-    "text": "[DIALOGUE_BREAK]É unha asemblea multitudinaria. María está con Juan. No medio da discusión, irrompe Ocón e pídelle ao delegado de facultade (FONTENLA) que o acompañe á comisaría. Tamén a outros TRES DELEGADOS, que conducíu fóra da facultade entre asubíos e berros de compañeiros: “Ocón dimisión por fascista y por cabrón”. Ocón enfróntase aos estudantes: “A ver quien es el macho que se enfrenta conmigo… gallinas!”. Sae. A asemblea continúa e decrétase a folga indefinida. Moita presenza policial á saída.[DIALOGUE_BREAK]",
+    "text": "É unha asemblea multitudinaria. María está con Juan. No medio da discusión, irrompe Ocón e pídelle ao delegado de facultade (FONTENLA) que o acompañe á comisaría. Tamén a outros TRES DELEGADOS, que conducíu fóra da facultade entre asubíos e berros de compañeiros: “Ocón dimisión por fascista y por cabrón”. Ocón enfróntase aos estudantes: “A ver quien es el macho que se enfrenta conmigo… gallinas!”. Sae. A asemblea continúa e decrétase a folga indefinida. Moita presenza policial á saída.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_aula_ciencias_dia",
       "AUDIO": "ambiente_clase"
@@ -1499,7 +1479,7 @@
   },
   "20. INT. EDIFICIO CENTRAL DA UNIVERSIDADE - DÍA": {
     "id": "20. INT. EDIFICIO CENTRAL DA UNIVERSIDADE - DÍA",
-    "text": "[DIALOGUE_BREAK]Ao mediodía, cando a Praza da Universidade é abandonada pola policía, regresan á reitoría para pecharse. Penetran 400 estudantes, aos que se suman máis (a policía non os bloquea ata a tarde-noite). [DIALOGUE_BREAK]{{IF:levarOctavillas=aceptar}}[DIALOGUE_BREAK][DIALOGUE_BREAK]   [DIALOGUE_BREAK]   [DIALOGUE_BREAK]{{ENDIF}}",
+    "text": "Ao mediodía, cando a Praza da Universidade é abandonada pola policía, regresan á reitoría para pecharse. Penetran 400 estudantes, aos que se suman máis (a policía non os bloquea ata a tarde-noite). [DIALOGUE_BREAK]{{IF:levarOctavillas=aceptar}}[DIALOGUE_BREAK]{{ENDIF}}[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_edificio_central_dia",
       "AUDIO": "ambiente_universidade"
@@ -1525,7 +1505,7 @@
   },
   "20.1. SÁBADO": {
     "id": "20.1. SÁBADO",
-    "text": "[DIALOGUE_BREAK]Juan está nervioso, non ten claro como vai reaccionar a policía. Vai entrando máis xente. Os grises non se moven, curiosamente. Cando levan un tempo pechados, e parece que non hai movemento, entra Constantino, profesor de Filoloxía, tantear como están e calmar os ánimos. [DIALOGUE_BREAK]Outro rapaz ten un tocadiscos e escoitan a Luis Cilia. [DIALOGUE_BREAK]",
+    "text": "Juan está nervioso, non ten claro como vai reaccionar a policía. Vai entrando máis xente. Os grises non se moven, curiosamente. Cando levan un tempo pechados, e parece que non hai movemento, entra Constantino, profesor de Filoloxía, tantear como están e calmar os ánimos. [DIALOGUE_BREAK]Outro rapaz ten un tocadiscos e escoitan a Luis Cilia. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_edificio_central_dia",
       "AUDIO": "ambiente_universidade, luis_cilia"
@@ -1541,7 +1521,7 @@
   },
   "20.2. SÁBADO": {
     "id": "20.2. SÁBADO",
-    "text": "[DIALOGUE_BREAK]Miguel está eufórico. Vai entrando máis xente. Os grises non se moven, curiosamente. Cando levan un tempo pechados, e parece que non hai movemento, entra Constantino, profesor de Filoloxía, tantear como están e calmar os ánimos. [DIALOGUE_BREAK]Outro rapaz ten un tocadiscos e escoitan a Luis Cilia. [DIALOGUE_BREAK]",
+    "text": "Miguel está eufórico. Vai entrando máis xente. Os grises non se moven, curiosamente. Cando levan un tempo pechados, e parece que non hai movemento, entra Constantino, profesor de Filoloxía, tantear como están e calmar os ánimos. [DIALOGUE_BREAK]Outro rapaz ten un tocadiscos e escoitan a Luis Cilia. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_edificio_central_dia",
       "AUDIO": "ambiente_universidade, luis_cilia"
@@ -1557,7 +1537,7 @@
   },
   "20.3. SÁBADO": {
     "id": "20.3. SÁBADO",
-    "text": "[DIALOGUE_BREAK]Non está claro como vai reaccionar a policía. Hai nervios. María está con Manuela e Concha. Vai entrando máis xente. Os grises non se moven, curiosamente. Cando levan un tempo pechados, e parece que non hai movemento, entra Constantino, profesor de Filoloxía, tantear como están e calmar os ánimos. [DIALOGUE_BREAK]Outro rapaz ten un tocadiscos e escoitan a Luis Cilia.[DIALOGUE_BREAK]",
+    "text": "Non está claro como vai reaccionar a policía. Hai nervios. María está con Manuela e Concha. Vai entrando máis xente. Os grises non se moven, curiosamente. Cando levan un tempo pechados, e parece que non hai movemento, entra Constantino, profesor de Filoloxía, tantear como están e calmar os ánimos. [DIALOGUE_BREAK]Outro rapaz ten un tocadiscos e escoitan a Luis Cilia.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_edificio_central_dia",
       "AUDIO": "ambiente_universidade, luis_cilia"
@@ -1573,7 +1553,7 @@
   },
   "21.1. NOITE SÁBADO": {
     "id": "21.1. NOITE SÁBADO",
-    "text": "[DIALOGUE_BREAK]Durmen nos corredores, tirados no chan, xa de goma negra. Manuela sube arriba coa súa parella, Alfredo. Juan míraos con desexo, pero non di nada. [DIALOGUE_BREAK]",
+    "text": "Durmen nos corredores, tirados no chan, xa de goma negra. Manuela sube arriba coa súa parella, Alfredo. Juan míraos con desexo, pero non di nada. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_edificio_central_noite",
       "AUDIO": "ambiente_universidade"
@@ -1589,7 +1569,7 @@
   },
   "22.1 DOMINGO": {
     "id": "22.1 DOMINGO",
-    "text": "[DIALOGUE_BREAK]Hai debate sobre a situación. Areces pide calma, mentres un falanxista vai en plan revolucionario. Comen bocatas de fóra, que traen algúns xesuítas.\nJavier del Valle canta Longa noite de Pedra, coa guitarra e harmónica tipo Bob Dylan. [DIALOGUE_BREAK]",
+    "text": "Hai debate sobre a situación. Areces pide calma, mentres un falanxista vai en plan revolucionario. Comen bocatas de fóra, que traen algúns xesuítas.\nJavier del Valle canta Longa noite de Pedra, coa guitarra e harmónica tipo Bob Dylan. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_edificio_central_dia",
       "AUDIO": "ambiente_universidade, longanoite"
@@ -1605,7 +1585,7 @@
   },
   "24.1 LUNS": {
     "id": "24.1 LUNS",
-    "text": "[DIALOGUE_BREAK]Non durme nada. Cansa, escolle se ir botar unha soneca á casa.[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
+    "text": "Non durme nada. Cansa, escolle se ir botar unha soneca á casa.[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_edificio_central_dia",
       "AUDIO": "ambiente_universidade"
@@ -1632,7 +1612,7 @@
   },
   "21.2 NOITE SABADO": {
     "id": "21.2 NOITE SABADO",
-    "text": "[DIALOGUE_BREAK]Durmen nos corredores, tirados no chan, xa de goma negra. Manuela sube arriba coa súa parella, Alfredo. Juan míraos con desexo, pero non di nada. [DIALOGUE_BREAK]",
+    "text": "Durmen nos corredores, tirados no chan, xa de goma negra. Manuela sube arriba coa súa parella, Alfredo. Juan míraos con desexo, pero non di nada. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_edificio_central_noite",
       "AUDIO": "ambiente_universidade"
@@ -1648,7 +1628,7 @@
   },
   "22.2 DOMINGO": {
     "id": "22.2 DOMINGO",
-    "text": "[DIALOGUE_BREAK]Hai debate sobre a situación. Areces pide calma, mentres un falanxista vai en plan revolucionario. Comen bocatas de fóra, que traen algúns xesuítas. \nJavier del Valle canta Longa noite de Pedra, coa guitarra e harmónica tipo Bob Dylan. [DIALOGUE_BREAK]",
+    "text": "Hai debate sobre a situación. Areces pide calma, mentres un falanxista vai en plan revolucionario. Comen bocatas de fóra, que traen algúns xesuítas. \nJavier del Valle canta Longa noite de Pedra, coa guitarra e harmónica tipo Bob Dylan. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_edificio_central_dia",
       "AUDIO": "ambiente_universidade, longanoite"
@@ -1664,7 +1644,7 @@
   },
   "23.2 NOITE DOMINGO": {
     "id": "23.2 NOITE DOMINGO",
-    "text": "[DIALOGUE_BREAK]Unhas mil persoas botan a noite segunda e con bastantes máis nervios. A forza pública fai varios conatos de entrada. [DIALOGUE_BREAK]Suben máis parellas arriba. Miguel proponlle a María subir. Ela di que non. Déixao e vai xunto a Manuela e Concha. [DIALOGUE_BREAK]",
+    "text": "Unhas mil persoas botan a noite segunda e con bastantes máis nervios. A forza pública fai varios conatos de entrada. [DIALOGUE_BREAK]Suben máis parellas arriba. Miguel proponlle a María subir. Ela di que non. Déixao e vai xunto a Manuela e Concha. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_edificio_central_noite",
       "AUDIO": "ambiente_universidade"
@@ -1680,7 +1660,7 @@
   },
   "23.1 NOITE DOMINGO": {
     "id": "23.1 NOITE DOMINGO",
-    "text": "[DIALOGUE_BREAK]Unhas mil persoas botan a noite segunda e con bastantes máis nervios. A forza pública fai varios conatos de entrada. [DIALOGUE_BREAK]Suben máis parellas arriba. María proponlle a Juan subir. El di que non. [DIALOGUE_BREAK]",
+    "text": "Unhas mil persoas botan a noite segunda e con bastantes máis nervios. A forza pública fai varios conatos de entrada. [DIALOGUE_BREAK]Suben máis parellas arriba. María proponlle a Juan subir. El di que non. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_edificio_central_noite",
       "AUDIO": "ambiente_universidade"
@@ -1696,7 +1676,7 @@
   },
   "21.3 NOITE SABADO": {
     "id": "21.3 NOITE SABADO",
-    "text": "[DIALOGUE_BREAK]Durmen nos corredores, tirados no chan, xa de goma negra. Manuela sube arriba coa súa parella, Alfredo.[DIALOGUE_BREAK]",
+    "text": "Durmen nos corredores, tirados no chan, xa de goma negra. Manuela sube arriba coa súa parella, Alfredo.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_edificio_central_noite",
       "AUDIO": "ambiente_universidade"
@@ -1712,7 +1692,7 @@
   },
   "22.3 DOMINGO": {
     "id": "22.3 DOMINGO",
-    "text": "[DIALOGUE_BREAK]Hai debate sobre a situación. Areces pide calma, mentres un falanxista vai en plan revolucionario.  Comen bocatas de fóra, que traen algúns xesuítas.\nJavier del Valle canta Longa noite de Pedra, coa guitarra e harmónica tipo Bob Dylan. [DIALOGUE_BREAK]",
+    "text": "Hai debate sobre a situación. Areces pide calma, mentres un falanxista vai en plan revolucionario.  Comen bocatas de fóra, que traen algúns xesuítas.\nJavier del Valle canta Longa noite de Pedra, coa guitarra e harmónica tipo Bob Dylan. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_edificio_central_dia",
       "AUDIO": "ambiente_universidade, longanoite"
@@ -1728,7 +1708,7 @@
   },
   "23.3 NOITE DOMINGO": {
     "id": "23.3 NOITE DOMINGO",
-    "text": "[DIALOGUE_BREAK]Unhas mil persoas botan a noite segunda e con bastantes máis nervios. A forza pública fai varios conatos de entrada. [DIALOGUE_BREAK]",
+    "text": "Unhas mil persoas botan a noite segunda e con bastantes máis nervios. A forza pública fai varios conatos de entrada. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_edificio_central_noite",
       "AUDIO": "ambiente_universidade"
@@ -1744,7 +1724,7 @@
   },
   "25.1. INT. CUARTO. PENSIÓN - DÍA": {
     "id": "25.1. INT. CUARTO. PENSIÓN - DÍA",
-    "text": "[DIALOGUE_BREAK]Durme. A Rosario dille que chamaron seus pais. Ela devólvelles a chamada, están moi nerviosos.  A consigna na casa: non meterse en nada de política. Non queren que volva. Intentan convecela. Intenta entrar, pero non lle deixan pasar. Esa madrugada foi desaloxado. [DIALOGUE_BREAK]",
+    "text": "Durme. A Rosario dille que chamaron seus pais. Ela devólvelles a chamada, están moi nerviosos.  A consigna na casa: non meterse en nada de política. Non queren que volva. Intentan convecela. Intenta entrar, pero non lle deixan pasar. Esa madrugada foi desaloxado. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_cuarto_pension_dia",
       "AUDIO": "ambiente_pension"
@@ -1760,7 +1740,7 @@
   },
   "26.1. LUNS NOITE": {
     "id": "26.1. LUNS NOITE",
-    "text": "[DIALOGUE_BREAK]Prodúcese o desaloxo pacífico pola policía na madrugada do luns ao martes, ás 8 da mañá do 12 de marzo. A forza pública entra e con paciencia colle do colo aos máis rebeldes, baixaos polas escaleiras e pousaos con delicadeza, no chan da porta da casona. 730 estudantes contou a policía, unha docena pola forza. Saen cantando o Venceremos nós. A xente apláudelles fóra. [DIALOGUE_BREAK]",
+    "text": "Prodúcese o desaloxo pacífico pola policía na madrugada do luns ao martes, ás 8 da mañá do 12 de marzo. A forza pública entra e con paciencia colle do colo aos máis rebeldes, baixaos polas escaleiras e pousaos con delicadeza, no chan da porta da casona. 730 estudantes contou a policía, unha docena pola forza. Saen cantando o Venceremos nós. A xente apláudelles fóra. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_edificio_central_dia",
       "AUDIO": "ambiente_universidade"
@@ -1776,7 +1756,7 @@
   },
   "24.2 LUNS": {
     "id": "24.2 LUNS",
-    "text": "[DIALOGUE_BREAK]Non durme nada. Cansa, escolle se ir botar unha soneca á casa.[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
+    "text": "Non durme nada. Cansa, escolle se ir botar unha soneca á casa.[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_edificio_central_dia",
       "AUDIO": "ambiente_universidade"
@@ -1803,7 +1783,7 @@
   },
   "26.2. LUNS NOITE": {
     "id": "26.2. LUNS NOITE",
-    "text": "[DIALOGUE_BREAK]Prodúcese o desaloxo pacífico pola policía na madrugada do luns ao martes, ás 8 da mañá do 12 de marzo. A forza pública entra e con paciencia colle do colo aos máis rebeldes, baixaos polas escaleiras e pousaos con delicadeza, no chan da porta da casona. 730 estudantes contou a policía, unha docena pola forza. Saen cantando o Venceremos nós. A xente apláudelles fóra. [DIALOGUE_BREAK]",
+    "text": "Prodúcese o desaloxo pacífico pola policía na madrugada do luns ao martes, ás 8 da mañá do 12 de marzo. A forza pública entra e con paciencia colle do colo aos máis rebeldes, baixaos polas escaleiras e pousaos con delicadeza, no chan da porta da casona. 730 estudantes contou a policía, unha docena pola forza. Saen cantando o Venceremos nós. A xente apláudelles fóra. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_edificio_central_dia",
       "AUDIO": "ambiente_universidade"
@@ -1819,7 +1799,7 @@
   },
   "24.3 LUNS": {
     "id": "24.3 LUNS",
-    "text": "[DIALOGUE_BREAK]Non durme nada. Cansa, escolle se ir botar unha soneca á casa.[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
+    "text": "Non durme nada. Cansa, escolle se ir botar unha soneca á casa.[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_edificio_central_dia",
       "AUDIO": "ambiente_universidade"
@@ -1846,7 +1826,7 @@
   },
   "26.3. LUNS NOITE": {
     "id": "26.3. LUNS NOITE",
-    "text": "[DIALOGUE_BREAK]Prodúcese o desaloxo pacífico pola policía na madrugada do luns ao martes, ás 8 da mañá do 12 de marzo. A forza pública entra e con paciencia colle do colo aos máis rebeldes, baixaos polas escaleiras e pousaos con delicadeza, no chan da porta da casona. 730 estudantes contou a policía, unha docena pola forza. Saen cantando o Venceremos nós. A xente apláudelles fóra. [DIALOGUE_BREAK]",
+    "text": "Prodúcese o desaloxo pacífico pola policía na madrugada do luns ao martes, ás 8 da mañá do 12 de marzo. A forza pública entra e con paciencia colle do colo aos máis rebeldes, baixaos polas escaleiras e pousaos con delicadeza, no chan da porta da casona. 730 estudantes contou a policía, unha docena pola forza. Saen cantando o Venceremos nós. A xente apláudelles fóra. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_edificio_central_dia",
       "AUDIO": "ambiente_universidade"
@@ -1901,7 +1881,7 @@
   },
   "27. INT. COMEDOR. PENSIÓN - DÍA": {
     "id": "27. INT. COMEDOR. PENSIÓN - DÍA",
-    "text": "[DIALOGUE_BREAK]María recibe unha visita de seu pai, acompañado de Ocón. Ela queda desconcertada. Fálanlle dos riscos de seguir de folga. É hora de que volva a orde á Universidade, non pode ser. Queren que colabore, que rompa a folga. Ela non responde.[DIALOGUE_BREAK]{{IF:levarOctavillas=aceptar}}[DIALOGUE_BREAK][DIALOGUE_BREAK]{{ELSE}}[DIALOGUE_BREAK][DIALOGUE_BREAK]{{ENDIF}}",
+    "text": "María recibe unha visita de seu pai, acompañado de Ocón. Ela queda desconcertada. Fálanlle dos riscos de seguir de folga. É hora de que volva a orde á Universidade, non pode ser. Queren que colabore, que rompa a folga. Ela non responde.[DIALOGUE_BREAK]{{IF:levarOctavillas=aceptar}}[DIALOGUE_BREAK]{{ELSE}}[DIALOGUE_BREAK]{{ENDIF}}[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_comedor_pension_dia",
       "AUDIO": "ambiente_pension"
@@ -1922,7 +1902,7 @@
   },
   "28.1. INT. AULA MAGNA. FACULTADE DE MEDICINA - DÍA": {
     "id": "28.1. INT. AULA MAGNA. FACULTADE DE MEDICINA - DÍA",
-    "text": "[DIALOGUE_BREAK]Asiste con Juan á asemblea. Asiste un pai que tamén quere convencer aos alumnos de que paren iso. VOTACIÓN: Vai adiante coa folga?[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
+    "text": "Asiste con Juan á asemblea. Asiste un pai que tamén quere convencer aos alumnos de que paren iso. VOTACIÓN: Vai adiante coa folga?[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_aula_magna_dia",
       "AUDIO": "ambiente_facultade"
@@ -1949,7 +1929,7 @@
   },
   "28.2. INT. AULA MAGNA. FACULTADE DE MEDICINA - DÍA": {
     "id": "28.2. INT. AULA MAGNA. FACULTADE DE MEDICINA - DÍA",
-    "text": "[DIALOGUE_BREAK]Asiste con Manuela e Concha á asemblea. Asiste un pai que tamén quere convencer aos alumnos de que paren iso. VOTACIÓN: Vai adiante coa folga?[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
+    "text": "Asiste con Manuela e Concha á asemblea. Asiste un pai que tamén quere convencer aos alumnos de que paren iso. VOTACIÓN: Vai adiante coa folga?[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_aula_magna_dia",
       "AUDIO": "ambiente_facultade"
@@ -1976,7 +1956,7 @@
   },
   "28.1.2 INT. AULA MAGNA. FACULTADE DE MEDICINA - DÍA": {
     "id": "28.1.2 INT. AULA MAGNA. FACULTADE DE MEDICINA - DÍA",
-    "text": "[DIALOGUE_BREAK]Gaña o si. Moita presenza policial na saída.[DIALOGUE_BREAK]",
+    "text": "Gaña o si. Moita presenza policial na saída.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_aula_magna_dia",
       "AUDIO": "ambiente_facultade"
@@ -1992,7 +1972,7 @@
   },
   "28.1.1 INT. AULA MAGNA. FACULTADE DE MEDICINA - DÍA": {
     "id": "28.1.1 INT. AULA MAGNA. FACULTADE DE MEDICINA - DÍA",
-    "text": "[DIALOGUE_BREAK]Juan míraa mal. Gaña o si. Moita presenza policial á saída. [DIALOGUE_BREAK]",
+    "text": "Juan míraa mal. Gaña o si. Moita presenza policial á saída. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_aula_magna_dia",
       "AUDIO": "ambiente_facultade"
@@ -2008,7 +1988,7 @@
   },
   "28.2.1 INT. AULA MAGNA. FACULTADE DE MEDICINA - DÍA": {
     "id": "28.2.1 INT. AULA MAGNA. FACULTADE DE MEDICINA - DÍA",
-    "text": "[DIALOGUE_BREAK]Manuela e Concha mírana mal. Gaña o si. Moita presenza policial á saída. [DIALOGUE_BREAK]",
+    "text": "Manuela e Concha mírana mal. Gaña o si. Moita presenza policial á saída. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_aula_magna_dia",
       "AUDIO": "ambiente_facultade"
@@ -2024,7 +2004,7 @@
   },
   "28.2.2 INT. AULA MAGNA. FACULTADE DE MEDICINA - DÍA": {
     "id": "28.2.2 INT. AULA MAGNA. FACULTADE DE MEDICINA - DÍA",
-    "text": "[DIALOGUE_BREAK]Gaña o si. Moita presenza policial na saída.[DIALOGUE_BREAK]",
+    "text": "Gaña o si. Moita presenza policial na saída.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_aula_magna_dia",
       "AUDIO": "ambiente_facultade"
@@ -2053,7 +2033,7 @@
   },
   "SECUENCIA DOCUMENTAL PASILLO": {
     "id": "SECUENCIA DOCUMENTAL PASILLO",
-    "text": "DOCUMENTAL: As mulleres entraron na folga, os homes non. Fixéronlles un pasillo coas carpetas. Xente que non foi. [DIALOGUE_BREAK]   [DIALOGUE_BREAK]",
+    "text": "DOCUMENTAL: As mulleres entraron na folga, os homes non. Fixéronlles un pasillo coas carpetas. Xente que non foi. [DIALOGUE_BREAK]",
     "media": {},
     "ai": {},
     "choices": [
@@ -2076,7 +2056,7 @@
   },
   "29.1.1.a INT. COCIÑA. PISO - DÍA": {
     "id": "29.1.1.a INT. COCIÑA. PISO - DÍA",
-    "text": "[DIALOGUE_BREAK]María está inqueda pola perda de matrícula e, consecuentemente, das bolsas. Chega un compañeiro que anuncia as sancións: Expulsión de Areces, Fontenla, Sarmiento Escalona, Lorenzo Porto, Fixas, Anciones de la Torre e Mariño Campos. Outros perdón exame (Sanxuás, Doménech…). Fálase de que facer, con paternalismo cara a María.[DIALOGUE_BREAK]",
+    "text": "María está inqueda pola perda de matrícula e, consecuentemente, das bolsas. Chega un compañeiro que anuncia as sancións: Expulsión de Areces, Fontenla, Sarmiento Escalona, Lorenzo Porto, Fixas, Anciones de la Torre e Mariño Campos. Outros perdón exame (Sanxuás, Doménech…). Fálase de que facer, con paternalismo cara a María.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_cocinha_piso_dia",
       "AUDIO": "ambiente_piso_dia"
@@ -2092,7 +2072,7 @@
   },
   "29.1.2.a INT. COMEDOR. PENSIÓN - DÍA": {
     "id": "29.1.2.a INT. COMEDOR. PENSIÓN - DÍA",
-    "text": "[DIALOGUE_BREAK]Concha está inqueda pola perda de matrícula e, consecuentemente, das bolsas. Chega Manuela e anuncia as sancións: Expulsión de Areces, Fontenla, Sarmiento Escalona, Lorenzo Porto, Fixas, Anciones de la Torre e Mariño Campos. Outros perdón exame (Sanxuás, Doménech…). Fálase de que facer, a situación parece complicada.[DIALOGUE_BREAK]",
+    "text": "Concha está inqueda pola perda de matrícula e, consecuentemente, das bolsas. Chega Manuela e anuncia as sancións: Expulsión de Areces, Fontenla, Sarmiento Escalona, Lorenzo Porto, Fixas, Anciones de la Torre e Mariño Campos. Outros perdón exame (Sanxuás, Doménech…). Fálase de que facer, a situación parece complicada.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_comedor_pension_dia",
       "AUDIO": "ambiente_pension"
@@ -2108,7 +2088,7 @@
   },
   "29.2.a. INT. AULA. FACULTADE DE CIENCIAS - DÍA": {
     "id": "29.2.a. INT. AULA. FACULTADE DE CIENCIAS - DÍA",
-    "text": "[DIALOGUE_BREAK]María vai a clase normal. Hai moi poucas persoas. [DIALOGUE_BREAK]{{IF:convitePisoJuan=aceptar}}[DIALOGUE_BREAK][DIALOGUE_BREAK]{{ELSE}}[DIALOGUE_BREAK][DIALOGUE_BREAK]{{ENDIF}}",
+    "text": "María vai a clase normal. Hai moi poucas persoas. [DIALOGUE_BREAK]{{IF:convitePisoJuan=aceptar}}[DIALOGUE_BREAK]{{ELSE}}[DIALOGUE_BREAK]{{ENDIF}}[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_aula_ciencias_dia",
       "AUDIO": "ambiente_aula"
@@ -2142,7 +2122,7 @@
   },
   "29.1.1.b INT. SALÓN DE ACTOS. MEDICINA - DÍA": {
     "id": "29.1.1.b INT. SALÓN DE ACTOS. MEDICINA - DÍA",
-    "text": "[DIALOGUE_BREAK]Ao rematar a asemblea, uns 200 estudantes falan de facer un peche. Tras uns quince minutos, na porta central, aparece un capitán da Policía Armada provisto dun megáfono e rodeado de \"números\". O capitán, di polo megáfono que, se ao terceiro toque de corneta non desaloxan, procederán a cargar. Comezan a cantar o Venceremos nós a todo pulmón. Entón, e despois dun único cornetazo, cargan. Un rapaz deféndese cun paraugas dun gris, intentando marchar por unha porta lateral. Vanos sacando.[DIALOGUE_BREAK]Logo terían que baixar pola escaleira central, vixiada por \"grises\", e chegar á porta. Pola escaleira caen a rolos varias persoas. Algúns respectan as mulleres, outros batían nelas con máis saña. [DIALOGUE_BREAK]Salvar un rapaz ao que lle están pegando?[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
+    "text": "Ao rematar a asemblea, uns 200 estudantes falan de facer un peche. Tras uns quince minutos, na porta central, aparece un capitán da Policía Armada provisto dun megáfono e rodeado de \"números\". O capitán, di polo megáfono que, se ao terceiro toque de corneta non desaloxan, procederán a cargar. Comezan a cantar o Venceremos nós a todo pulmón. Entón, e despois dun único cornetazo, cargan. Un rapaz deféndese cun paraugas dun gris, intentando marchar por unha porta lateral. Vanos sacando.[DIALOGUE_BREAK]Logo terían que baixar pola escaleira central, vixiada por \"grises\", e chegar á porta. Pola escaleira caen a rolos varias persoas. Algúns respectan as mulleres, outros batían nelas con máis saña. [DIALOGUE_BREAK]Salvar un rapaz ao que lle están pegando?[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_salon_actos_dia",
       "AUDIO": "ambiente_facultade"
@@ -2163,7 +2143,7 @@
   },
   "29.1.2.b INT. SALÓN DE ACTOS. MEDICINA - DÍA": {
     "id": "29.1.2.b INT. SALÓN DE ACTOS. MEDICINA - DÍA",
-    "text": "[DIALOGUE_BREAK]Ao rematar a asemblea, uns 200 estudantes falan de facer un peche. Tras uns quince minutos, na porta central, aparece un capitán da Policía Armada provisto dun megáfono e rodeado de \"números\". O capitán, di polo megáfono que, se ao terceiro toque de corneta non desaloxan, procederán a cargar. Comezan a cantar o Venceremos nós a todo pulmón. Entón, e despois dun único cornetazo, cargan. Un rapaz deféndese cun paraugas dun gris, intentando marchar por unha porta lateral. Vanos sacando.[DIALOGUE_BREAK]Logo terían que baixar pola escaleira central, vixiada por \"grises\", e chegar á porta. Pola escaleira caen a rolos varias persoas. Algúns respectan as mulleres, outros batían nelas con máis saña. [DIALOGUE_BREAK]Salvar un rapaz ao que lle están pegando?[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
+    "text": "Ao rematar a asemblea, uns 200 estudantes falan de facer un peche. Tras uns quince minutos, na porta central, aparece un capitán da Policía Armada provisto dun megáfono e rodeado de \"números\". O capitán, di polo megáfono que, se ao terceiro toque de corneta non desaloxan, procederán a cargar. Comezan a cantar o Venceremos nós a todo pulmón. Entón, e despois dun único cornetazo, cargan. Un rapaz deféndese cun paraugas dun gris, intentando marchar por unha porta lateral. Vanos sacando.[DIALOGUE_BREAK]Logo terían que baixar pola escaleira central, vixiada por \"grises\", e chegar á porta. Pola escaleira caen a rolos varias persoas. Algúns respectan as mulleres, outros batían nelas con máis saña. [DIALOGUE_BREAK]Salvar un rapaz ao que lle están pegando?[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_salon_actos_dia",
       "AUDIO": "ambiente_facultade"
@@ -2184,7 +2164,7 @@
   },
   "29.2.b.1. INT. MEZQUITA - DÍA": {
     "id": "29.2.b.1. INT. MEZQUITA - DÍA",
-    "text": "[DIALOGUE_BREAK]Juan e Mercedes repróchanlle as súas accións. Por sorte as vacacións xa están preto. Chéganlle novas de que a asemblea de Medicina foi desaloxada. [DIALOGUE_BREAK]",
+    "text": "Juan e Mercedes repróchanlle as súas accións. Por sorte as vacacións xa están preto. Chéganlle novas de que a asemblea de Medicina foi desaloxada. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_mezquita_dia",
       "AUDIO": "ambiente_bar"
@@ -2200,7 +2180,7 @@
   },
   "29.2.b.2. INT. MIAMI - DÍA": {
     "id": "29.2.b.2. INT. MIAMI - DÍA",
-    "text": "[DIALOGUE_BREAK]Manuela e Concha repróchanlle as súas accións. Por sorte as vacacións xa están preto. Chéganlle novas de que a asemblea de Medicina foi desaloxada. [DIALOGUE_BREAK]",
+    "text": "Manuela e Concha repróchanlle as súas accións. Por sorte as vacacións xa están preto. Chéganlle novas de que a asemblea de Medicina foi desaloxada. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_miami_dia",
       "AUDIO": "ambiente_bar"
@@ -2216,7 +2196,7 @@
   },
   "29.2.c. INT. CUARTO. PENSIÓN - DÍA": {
     "id": "29.2.c. INT. CUARTO. PENSIÓN - DÍA",
-    "text": "[DIALOGUE_BREAK]Escoita o ruído da manifestación desde o cuarto. Ve o que está pasando. Resumo da situación, pero ela non participa.[DIALOGUE_BREAK]",
+    "text": "Escoita o ruído da manifestación desde o cuarto. Ve o que está pasando. Resumo da situación, pero ela non participa.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_cuarto_pension_dia",
       "AUDIO": "ambiente_pension"
@@ -2232,7 +2212,7 @@
   },
   "Textos en pantalla 3": {
     "id": "Textos en pantalla 3",
-    "text": "Texto en pantalla: “Á mañá seguinte, continuaron as protestas pedindo a liberación dos detidos. Nove dos principais líderes ingresaron no cárcere, con multas de 15 a 35 mil pesetas. Os estudantes recadaron 65.000 para as fianzas”.[DIALOGUE_BREAK]Texto en pantalla: “As autoridades decidiron adiantar as vacacións de Semana Santa. Os detidos foron liberados durante a Pascua, e as sancións condoadas. Como mostra de boa fe, á volta das ferias, o estudantado decidiu dar 10 días de normalidade agardando que se condedesen as súas demandas”. [DIALOGUE_BREAK]Texto en pantalla: “O 26 de abril, na Facultade de Medicina, daba o seu primeiro concerto Voces Ceibes” — as FIERAS falan do que significou. Comeza a soar a música Longa noite de pedra. [DIALOGUE_BREAK]   [DIALOGUE_BREAK]",
+    "text": "Texto en pantalla: “Á mañá seguinte, continuaron as protestas pedindo a liberación dos detidos. Nove dos principais líderes ingresaron no cárcere, con multas de 15 a 35 mil pesetas. Os estudantes recadaron 65.000 para as fianzas”.[DIALOGUE_BREAK]Texto en pantalla: “As autoridades decidiron adiantar as vacacións de Semana Santa. Os detidos foron liberados durante a Pascua, e as sancións condoadas. Como mostra de boa fe, á volta das ferias, o estudantado decidiu dar 10 días de normalidade agardando que se condedesen as súas demandas”. [DIALOGUE_BREAK]Texto en pantalla: “O 26 de abril, na Facultade de Medicina, daba o seu primeiro concerto Voces Ceibes” — as FIERAS falan do que significou. Comeza a soar a música Longa noite de pedra. [DIALOGUE_BREAK]",
     "media": {},
     "ai": {},
     "choices": [
@@ -2255,7 +2235,7 @@
   },
   "30.2. INT. COCIÑA. PISO - DÍA": {
     "id": "30.2. INT. COCIÑA. PISO - DÍA",
-    "text": "[DIALOGUE_BREAK]Juan e María están co grupo de amigos. Haberá unha nova asemblea o 2 de maio para saber se se continúa coa folga, con voto ante notario, porque falta unha demanda por satisfacer: que se perdoen as sancións.[DIALOGUE_BREAK]",
+    "text": "Juan e María están co grupo de amigos. Haberá unha nova asemblea o 2 de maio para saber se se continúa coa folga, con voto ante notario, porque falta unha demanda por satisfacer: que se perdoen as sancións.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_cocinha_piso_dia",
       "AUDIO": "ambiente_cocinha"
@@ -2271,7 +2251,7 @@
   },
   "30.3. INT. COMEDOR. PENSIÓN - DÍA": {
     "id": "30.3. INT. COMEDOR. PENSIÓN - DÍA",
-    "text": "[DIALOGUE_BREAK]Manuela trae novas. Haberá unha nova asemblea o 2 de maio para saber se se continúa coa folga, con voto ante notario, porque falta unha demanda por satisfacer: que se perdoen as sancións.[DIALOGUE_BREAK]",
+    "text": "Manuela trae novas. Haberá unha nova asemblea o 2 de maio para saber se se continúa coa folga, con voto ante notario, porque falta unha demanda por satisfacer: que se perdoen as sancións.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_comedor_pension_dia",
       "AUDIO": "ambiente_pension"
@@ -2287,7 +2267,7 @@
   },
   "30.1. INT. MEZQUITA - DÍA": {
     "id": "30.1. INT. MEZQUITA - DÍA",
-    "text": "[DIALOGUE_BREAK]Mentres toma un café, María mira na prensa as novas. Escoita unha conversa: Haberá unha nova asemblea o 2 de maio para saber se se continúa coa folga, con voto ante notario, porque falta unha demanda por satisfacer: que se perdoen as sancións.[DIALOGUE_BREAK]",
+    "text": "Mentres toma un café, María mira na prensa as novas. Escoita unha conversa: Haberá unha nova asemblea o 2 de maio para saber se se continúa coa folga, con voto ante notario, porque falta unha demanda por satisfacer: que se perdoen as sancións.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_mezquita_dia",
       "AUDIO": "ambiente_bar"
@@ -2303,7 +2283,7 @@
   },
   "31. INT. AULA. FACULTADE DE CIENCIAS - DÍA": {
     "id": "31. INT. AULA. FACULTADE DE CIENCIAS - DÍA",
-    "text": "[DIALOGUE_BREAK]VOTA: SI ou NON[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
+    "text": "VOTA: SI ou NON[DIALOGUE_BREAK]/* OPCIÓNS */[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_aula_ciencias_dia",
       "AUDIO": "ambiente_aula"
@@ -2344,7 +2324,7 @@
   },
   "29.1.1.c Salvar rapaz": {
     "id": "29.1.1.c Salvar rapaz",
-    "text": "[DIALOGUE_BREAK]Tirouse enriba dun compañeiro para que non lle deran, danlle a ela. Acaba no hospital.[DIALOGUE_BREAK]",
+    "text": "Tirouse enriba dun compañeiro para que non lle deran, danlle a ela. Acaba no hospital.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_salon_actos_dia",
       "AUDIO": "ambiente_facultade"
@@ -2360,7 +2340,7 @@
   },
   "29.1.1.d INT. COMEDOR. PENSIÓN - DÍ": {
     "id": "29.1.1.d INT. COMEDOR. PENSIÓN - DÍ",
-    "text": "[DIALOGUE_BREAK]Resumo da situación, deixan que a visite Juan.[DIALOGUE_BREAK]",
+    "text": "Resumo da situación, deixan que a visite Juan.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_comedor_pension_dia",
       "AUDIO": "ambiente_pension"
@@ -2376,7 +2356,7 @@
   },
   "29.1.1.e Sair da folga": {
     "id": "29.1.1.e Sair da folga",
-    "text": "[DIALOGUE_BREAK]Consegue saír sen ser ferida.[DIALOGUE_BREAK]",
+    "text": "Consegue saír sen ser ferida.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_salon_actos_dia",
       "AUDIO": "ambiente_facultade"
@@ -2392,7 +2372,7 @@
   },
   "29.1.1.f EXT. PRAZA DE GALICIA - DÍA": {
     "id": "29.1.1.f EXT. PRAZA DE GALICIA - DÍA",
-    "text": "[DIALOGUE_BREAK]Pola tarde, os estudantes, a decisión do Camarón van despedir á estación de tren a José Hernández Díaz, Director Xeral de Ensino Superior e Investigación, que estaba en Santiago para presidir a Xunta de Goberno (28M) onde se decidiran as sancións. Juan vai con ela. Queda a metade de camiño, no Hórreo, entre un grupo interceptado pola policía. Desta volta a estratexia policial traballou á perfección cortando aos manifestantes en dous sectores e atacando duramente aos de cabeza (que chegaran xa á Estación e que á súa vez, utilizaron por primeira vez as pedras, os paos e as barricadas). Arriba, no Hórreo, escoitábanse os croiazos rebotando nos coches, os golpes de bucina e mesmo algún disparo. O señor Director de Universidades, mágoa fora, non picara no anzol. El colleu o tren de volta a Madrid en Padrón. Houbo 5 detidos. [DIALOGUE_BREAK]",
+    "text": "Pola tarde, os estudantes, a decisión do Camarón van despedir á estación de tren a José Hernández Díaz, Director Xeral de Ensino Superior e Investigación, que estaba en Santiago para presidir a Xunta de Goberno (28M) onde se decidiran as sancións. Juan vai con ela. Queda a metade de camiño, no Hórreo, entre un grupo interceptado pola policía. Desta volta a estratexia policial traballou á perfección cortando aos manifestantes en dous sectores e atacando duramente aos de cabeza (que chegaran xa á Estación e que á súa vez, utilizaron por primeira vez as pedras, os paos e as barricadas). Arriba, no Hórreo, escoitábanse os croiazos rebotando nos coches, os golpes de bucina e mesmo algún disparo. O señor Director de Universidades, mágoa fora, non picara no anzol. El colleu o tren de volta a Madrid en Padrón. Houbo 5 detidos. [DIALOGUE_BREAK]",
     "media": {
       "IMG": "ext_praza_galicia_dia",
       "AUDIO": "ambiente_rua"
@@ -2408,7 +2388,7 @@
   },
   "29.1.2.c Salvar rapaz": {
     "id": "29.1.2.c Salvar rapaz",
-    "text": "[DIALOGUE_BREAK]Tirouse enriba dun compañeiro para que non lle deran, danlle a ela. Acaba no hospital.[DIALOGUE_BREAK]",
+    "text": "Tirouse enriba dun compañeiro para que non lle deran, danlle a ela. Acaba no hospital.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_salon_actos_dia",
       "AUDIO": "ambiente_facultade"
@@ -2424,7 +2404,7 @@
   },
   "29.1.2.e Sair da folga": {
     "id": "29.1.2.e Sair da folga",
-    "text": "[DIALOGUE_BREAK] Consegue saír sen ser ferida.",
+    "text": "Consegue saír sen ser ferida.",
     "media": {
       "IMG": "int_salon_actos_dia",
       "AUDIO": "ambiente_facultade"
@@ -2440,7 +2420,7 @@
   },
   "29.1.2.d INT. CUARTO. PENSIÓN - DÍA": {
     "id": "29.1.2.d INT. CUARTO. PENSIÓN - DÍA",
-    "text": "[DIALOGUE_BREAK]Resumo da situación, con Concha e Manuela.[DIALOGUE_BREAK]",
+    "text": "Resumo da situación, con Concha e Manuela.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "int_cuarto_pension_dia",
       "AUDIO": "ambiente_pension"
@@ -2456,7 +2436,7 @@
   },
   "29.1.2.f EXT. PRAZA DE GALICIA - DÍA": {
     "id": "29.1.2.f EXT. PRAZA DE GALICIA - DÍA",
-    "text": "[DIALOGUE_BREAK]Pola tarde, os estudantes, a decisión do Camarón van despedir á estación de tren a José Hernández Díaz, Director Xeral de Ensino Superior e Investigación, que estaba en Santiago para presidir a Xunta de Goberno (28M) onde se decidiran as sancións.Está con Manuela e Concha. Queda a metade de camiño, no Hórreo, entre un grupo interceptado pola policía. Desta volta a estratexia policial traballou á perfección cortando aos manifestantes en dous sectores e atacando duramente aos de cabeza (que chegaran xa á Estación e que á súa vez, utilizaron por primeira vez as pedras, os paos e as barricadas). Arriba, no Hórreo, escoitábanse os croiazos rebotando nos coches, os golpes de bucina e mesmo algún disparo. O señor Director de Universidades, mágoa fora, non picara no anzol. El colleu o tren de volta a Madrid en Padrón. Houbo 5 detidos.[DIALOGUE_BREAK]",
+    "text": "Pola tarde, os estudantes, a decisión do Camarón van despedir á estación de tren a José Hernández Díaz, Director Xeral de Ensino Superior e Investigación, que estaba en Santiago para presidir a Xunta de Goberno (28M) onde se decidiran as sancións.Está con Manuela e Concha. Queda a metade de camiño, no Hórreo, entre un grupo interceptado pola policía. Desta volta a estratexia policial traballou á perfección cortando aos manifestantes en dous sectores e atacando duramente aos de cabeza (que chegaran xa á Estación e que á súa vez, utilizaron por primeira vez as pedras, os paos e as barricadas). Arriba, no Hórreo, escoitábanse os croiazos rebotando nos coches, os golpes de bucina e mesmo algún disparo. O señor Director de Universidades, mágoa fora, non picara no anzol. El colleu o tren de volta a Madrid en Padrón. Houbo 5 detidos.[DIALOGUE_BREAK]",
     "media": {
       "IMG": "ext_praza_galicia_dia",
       "AUDIO": "ambiente_rua"
@@ -2469,5 +2449,82 @@
         "state_change": null
       }
     ]
+  },
+  "Pasaje sin título": {
+    "id": "Pasaje sin título",
+    "text": "",
+    "media": {},
+    "ai": {},
+    "choices": []
+  },
+  "6.LOXICA_BAR": {
+    "id": "6.LOXICA_BAR",
+    "text": "",
+    "media": {},
+    "ai": {
+      "ROUTER": {
+        "variable": "barNoite",
+        "value": "miami",
+        "targetTrue": "6_1_INT42DIA",
+        "targetFalse": "6_2_INTMEZQUITADIA"
+      }
+    },
+    "choices": []
+  },
+  "10.1_ROUTER": {
+    "id": "10.1_ROUTER",
+    "text": "",
+    "media": {},
+    "ai": {
+      "ROUTER": {
+        "variable": "libro",
+        "value": "comprado",
+        "targetTrue": "10.1. INT. O 42 - DÍA",
+        "targetFalse": "10.2. INT. MIAMI - DÍA"
+      }
+    },
+    "choices": []
+  },
+  "11_ROUTER_A": {
+    "id": "11_ROUTER_A",
+    "text": "",
+    "media": {},
+    "ai": {
+      "ROUTER": {
+        "variable": "libro",
+        "value": "roubado",
+        "targetTrue": "11.3 - INT. MEZQUITA - DIA",
+        "targetFalse": "11_ROUTER_B"
+      }
+    },
+    "choices": []
+  },
+  "11_ROUTER_B": {
+    "id": "11_ROUTER_B",
+    "text": "",
+    "media": {},
+    "ai": {
+      "ROUTER": {
+        "variable": "miami",
+        "value": "si",
+        "targetTrue": "11.3 - INT. MEZQUITA - DIA",
+        "targetFalse": "11_ROUTER_C"
+      }
+    },
+    "choices": []
+  },
+  "11_ROUTER_C": {
+    "id": "11_ROUTER_C",
+    "text": "",
+    "media": {},
+    "ai": {
+      "ROUTER": {
+        "variable": "saudarJuan",
+        "value": "saudar",
+        "targetTrue": "11.1 - INT. MEZQUITA - DIA",
+        "targetFalse": "11.2 - INT. MEZQUITA - DIA"
+      }
+    },
+    "choices": []
   }
 }
